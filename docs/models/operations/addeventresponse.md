@@ -1,0 +1,10 @@
+# AddEventResponse
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                  | [components.HTTPMetadata](../../models/components/httpmetadata.md)                           | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `object`                                                                                     | [Optional[operations.AddEventResponseBody]](../../models/operations/addeventresponsebody.md) | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `unified_event_output`                                                                       | [Optional[components.UnifiedEventOutput]](../../models/components/unifiedeventoutput.md)     | :heavy_minus_sign:                                                                           | N/A                                                                                          |

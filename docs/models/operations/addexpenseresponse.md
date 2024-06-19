@@ -1,0 +1,10 @@
+# AddExpenseResponse
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                               | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `object`                                                                                         | [Optional[operations.AddExpenseResponseBody]](../../models/operations/addexpenseresponsebody.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
+| `unified_expense_output`                                                                         | [Optional[components.UnifiedExpenseOutput]](../../models/components/unifiedexpenseoutput.md)     | :heavy_minus_sign:                                                                               | N/A                                                                                              |

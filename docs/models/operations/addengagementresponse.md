@@ -1,0 +1,10 @@
+# AddEngagementResponse
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                     | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `object`                                                                                               | [Optional[operations.AddEngagementResponseBody]](../../models/operations/addengagementresponsebody.md) | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `unified_engagement_output`                                                                            | [Optional[components.UnifiedEngagementOutput]](../../models/components/unifiedengagementoutput.md)     | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

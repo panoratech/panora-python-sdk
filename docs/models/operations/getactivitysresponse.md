@@ -1,0 +1,9 @@
+# GetActivitysResponse
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                          | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                   | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `object`                                                                                             | [Optional[operations.GetActivitysResponseBody]](../../models/operations/getactivitysresponsebody.md) | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |

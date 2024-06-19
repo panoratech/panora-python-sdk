@@ -1,0 +1,10 @@
+# AddItemResponse
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                | [components.HTTPMetadata](../../models/components/httpmetadata.md)                         | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `object`                                                                                   | [Optional[operations.AddItemResponseBody]](../../models/operations/additemresponsebody.md) | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `unified_item_output`                                                                      | [Optional[components.UnifiedItemOutput]](../../models/components/unifieditemoutput.md)     | :heavy_minus_sign:                                                                         | N/A                                                                                        |

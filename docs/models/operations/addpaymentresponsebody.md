@@ -1,0 +1,11 @@
+# AddPaymentResponseBody
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `status_code`                                                                                | *float*                                                                                      | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `message`                                                                                    | *Optional[str]*                                                                              | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `error`                                                                                      | *Optional[str]*                                                                              | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `data`                                                                                       | [Optional[components.UnifiedPaymentOutput]](../../models/components/unifiedpaymentoutput.md) | :heavy_minus_sign:                                                                           | N/A                                                                                          |

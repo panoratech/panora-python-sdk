@@ -1,0 +1,10 @@
+# AddScoreCardsResponse
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                     | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `object`                                                                                               | [Optional[operations.AddScoreCardsResponseBody]](../../models/operations/addscorecardsresponsebody.md) | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `unified_score_card_outputs`                                                                           | List[[components.UnifiedScoreCardOutput](../../models/components/unifiedscorecardoutput.md)]           | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

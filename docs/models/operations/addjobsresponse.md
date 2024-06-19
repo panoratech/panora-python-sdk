@@ -1,0 +1,10 @@
+# AddJobsResponse
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                | [components.HTTPMetadata](../../models/components/httpmetadata.md)                         | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `object`                                                                                   | [Optional[operations.AddJobsResponseBody]](../../models/operations/addjobsresponsebody.md) | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `unified_job_outputs`                                                                      | List[[components.UnifiedJobOutput](../../models/components/unifiedjoboutput.md)]           | :heavy_minus_sign:                                                                         | N/A                                                                                        |

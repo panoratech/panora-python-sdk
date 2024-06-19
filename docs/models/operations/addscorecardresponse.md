@@ -1,0 +1,10 @@
+# AddScoreCardResponse
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                          | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                   | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `object`                                                                                             | [Optional[operations.AddScoreCardResponseBody]](../../models/operations/addscorecardresponsebody.md) | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |
+| `unified_score_card_output`                                                                          | [Optional[components.UnifiedScoreCardOutput]](../../models/components/unifiedscorecardoutput.md)     | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |

@@ -1,0 +1,9 @@
+# GetCompanyInfoResponse
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                              | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                       | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
+| `object`                                                                                                 | [Optional[operations.GetCompanyInfoResponseBody]](../../models/operations/getcompanyinforesponsebody.md) | :heavy_minus_sign:                                                                                       | N/A                                                                                                      |

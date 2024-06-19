@@ -1,0 +1,10 @@
+# AddNoteResponse
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                | [components.HTTPMetadata](../../models/components/httpmetadata.md)                         | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `object`                                                                                   | [Optional[operations.AddNoteResponseBody]](../../models/operations/addnoteresponsebody.md) | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `unified_note_output`                                                                      | [Optional[components.UnifiedNoteOutput]](../../models/components/unifiednoteoutput.md)     | :heavy_minus_sign:                                                                         | N/A                                                                                        |

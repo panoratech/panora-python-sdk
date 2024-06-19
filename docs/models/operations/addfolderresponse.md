@@ -1,0 +1,10 @@
+# AddFolderResponse
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                    | [components.HTTPMetadata](../../models/components/httpmetadata.md)                             | :heavy_check_mark:                                                                             | N/A                                                                                            |
+| `object`                                                                                       | [Optional[operations.AddFolderResponseBody]](../../models/operations/addfolderresponsebody.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
+| `unified_folder_output`                                                                        | [Optional[components.UnifiedFolderOutput]](../../models/components/unifiedfolderoutput.md)     | :heavy_minus_sign:                                                                             | N/A                                                                                            |

@@ -1,0 +1,10 @@
+# AddLocationsResponse
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                          | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                   | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `object`                                                                                             | [Optional[operations.AddLocationsResponseBody]](../../models/operations/addlocationsresponsebody.md) | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |
+| `unified_location_outputs`                                                                           | List[[components.UnifiedLocationOutput](../../models/components/unifiedlocationoutput.md)]           | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |

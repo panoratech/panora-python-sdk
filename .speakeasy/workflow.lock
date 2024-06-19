@@ -1,0 +1,27 @@
+speakeasyVersion: 1.308.2
+sources:
+    python-sdk-source-github-main:
+        sourceNamespace: python-sdk-source-github-main
+        sourceRevisionDigest: sha256:5bdba502bccaec31d3abd53c9be0eb9f6ae2c6ddf509dd1765d4aeccee6d59d3
+        sourceBlobDigest: sha256:581bc4392b2003d622467da7a034bfe7365437813ad3088e3b96256dc1200e1b
+        tags:
+            - latest
+targets:
+    my-first-target:
+        source: python-sdk-source-github-main
+        sourceNamespace: python-sdk-source-github-main
+        sourceRevisionDigest: sha256:5bdba502bccaec31d3abd53c9be0eb9f6ae2c6ddf509dd1765d4aeccee6d59d3
+        sourceBlobDigest: sha256:581bc4392b2003d622467da7a034bfe7365437813ad3088e3b96256dc1200e1b
+        outLocation: /Users/rachid/Panora/panora-python-sdk
+workflow:
+    workflowVersion: 1.0.0
+    sources:
+        python-sdk-source-github-main:
+            inputs:
+                - location: https://raw.githubusercontent.com/panoratech/Panora/main/packages/api/swagger/swagger-spec.json
+            registry:
+                location: registry.speakeasyapi.dev/panora/panora/python-sdk-source-github-main
+    targets:
+        my-first-target:
+            target: python
+            source: python-sdk-source-github-main

@@ -1,0 +1,11 @@
+# AddPayGroupsRequest
+
+
+## Fields
+
+| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `connection_token`                                                                       | *str*                                                                                    | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `x_connection_token`                                                                     | *str*                                                                                    | :heavy_check_mark:                                                                       | The connection token                                                                     |
+| `request_body`                                                                           | List[[components.UnifiedPayGroupInput](../../models/components/unifiedpaygroupinput.md)] | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `remote_data`                                                                            | *Optional[bool]*                                                                         | :heavy_minus_sign:                                                                       | Set to true to include data from the original Hris software.                             |

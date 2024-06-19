@@ -1,0 +1,9 @@
+# GetTrackingCategorysResponse
+
+
+## Fields
+
+| Field                                                                                                                | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                                          | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                                   | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |
+| `object`                                                                                                             | [Optional[operations.GetTrackingCategorysResponseBody]](../../models/operations/gettrackingcategorysresponsebody.md) | :heavy_minus_sign:                                                                                                   | N/A                                                                                                                  |

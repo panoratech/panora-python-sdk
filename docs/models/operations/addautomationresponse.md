@@ -1,0 +1,10 @@
+# AddAutomationResponse
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                     | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `object`                                                                                               | [Optional[operations.AddAutomationResponseBody]](../../models/operations/addautomationresponsebody.md) | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `unified_automation_output`                                                                            | [Optional[components.UnifiedAutomationOutput]](../../models/components/unifiedautomationoutput.md)     | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

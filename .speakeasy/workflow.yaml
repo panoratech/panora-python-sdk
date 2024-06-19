@@ -1,0 +1,11 @@
+workflowVersion: 1.0.0
+sources:
+    python-sdk-source-github-main:
+        inputs:
+            - location: https://raw.githubusercontent.com/panoratech/Panora/main/packages/api/swagger/swagger-spec.json
+        registry:
+            location: registry.speakeasyapi.dev/panora/panora/python-sdk-source-github-main
+targets:
+    my-first-target:
+        target: python
+        source: python-sdk-source-github-main

@@ -1,0 +1,10 @@
+# AddSharedlinkResponse
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                     | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `object`                                                                                               | [Optional[operations.AddSharedlinkResponseBody]](../../models/operations/addsharedlinkresponsebody.md) | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `unified_shared_link_output`                                                                           | [Optional[components.UnifiedSharedLinkOutput]](../../models/components/unifiedsharedlinkoutput.md)     | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

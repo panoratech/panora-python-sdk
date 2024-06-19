@@ -1,0 +1,10 @@
+# AddTaxRateResponse
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                               | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `object`                                                                                         | [Optional[operations.AddTaxRateResponseBody]](../../models/operations/addtaxrateresponsebody.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
+| `unified_tax_rate_output`                                                                        | [Optional[components.UnifiedTaxRateOutput]](../../models/components/unifiedtaxrateoutput.md)     | :heavy_minus_sign:                                                                               | N/A                                                                                              |

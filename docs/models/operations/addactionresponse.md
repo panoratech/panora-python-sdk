@@ -1,0 +1,10 @@
+# AddActionResponse
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                    | [components.HTTPMetadata](../../models/components/httpmetadata.md)                             | :heavy_check_mark:                                                                             | N/A                                                                                            |
+| `object`                                                                                       | [Optional[operations.AddActionResponseBody]](../../models/operations/addactionresponsebody.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
+| `unified_action_output`                                                                        | [Optional[components.UnifiedActionOutput]](../../models/components/unifiedactionoutput.md)     | :heavy_minus_sign:                                                                             | N/A                                                                                            |

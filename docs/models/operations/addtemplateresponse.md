@@ -1,0 +1,10 @@
+# AddTemplateResponse
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                        | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                 | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| `object`                                                                                           | [Optional[operations.AddTemplateResponseBody]](../../models/operations/addtemplateresponsebody.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
+| `unified_template_output`                                                                          | [Optional[components.UnifiedTemplateOutput]](../../models/components/unifiedtemplateoutput.md)     | :heavy_minus_sign:                                                                                 | N/A                                                                                                |

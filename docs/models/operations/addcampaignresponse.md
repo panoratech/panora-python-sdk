@@ -1,0 +1,10 @@
+# AddCampaignResponse
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                        | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                 | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| `object`                                                                                           | [Optional[operations.AddCampaignResponseBody]](../../models/operations/addcampaignresponsebody.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
+| `unified_campaign_output`                                                                          | [Optional[components.UnifiedCampaignOutput]](../../models/components/unifiedcampaignoutput.md)     | :heavy_minus_sign:                                                                                 | N/A                                                                                                |

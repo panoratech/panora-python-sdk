@@ -1,0 +1,10 @@
+# AddDealsResponse
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                  | [components.HTTPMetadata](../../models/components/httpmetadata.md)                           | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `object`                                                                                     | [Optional[operations.AddDealsResponseBody]](../../models/operations/adddealsresponsebody.md) | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `unified_deal_outputs`                                                                       | List[[components.UnifiedDealOutput](../../models/components/unifieddealoutput.md)]           | :heavy_minus_sign:                                                                           | N/A                                                                                          |

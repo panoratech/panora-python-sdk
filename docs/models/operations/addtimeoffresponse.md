@@ -1,0 +1,10 @@
+# AddTimeoffResponse
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                               | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `object`                                                                                         | [Optional[operations.AddTimeoffResponseBody]](../../models/operations/addtimeoffresponsebody.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
+| `unified_timeoff_output`                                                                         | [Optional[components.UnifiedTimeoffOutput]](../../models/components/unifiedtimeoffoutput.md)     | :heavy_minus_sign:                                                                               | N/A                                                                                              |

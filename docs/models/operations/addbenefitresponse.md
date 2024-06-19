@@ -1,0 +1,10 @@
+# AddBenefitResponse
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                               | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `object`                                                                                         | [Optional[operations.AddBenefitResponseBody]](../../models/operations/addbenefitresponsebody.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
+| `unified_benefit_output`                                                                         | [Optional[components.UnifiedBenefitOutput]](../../models/components/unifiedbenefitoutput.md)     | :heavy_minus_sign:                                                                               | N/A                                                                                              |

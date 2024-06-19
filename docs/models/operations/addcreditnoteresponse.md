@@ -1,0 +1,10 @@
+# AddCreditNoteResponse
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                     | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `object`                                                                                               | [Optional[operations.AddCreditNoteResponseBody]](../../models/operations/addcreditnoteresponsebody.md) | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `unified_credit_note_output`                                                                           | [Optional[components.UnifiedCreditNoteOutput]](../../models/components/unifiedcreditnoteoutput.md)     | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

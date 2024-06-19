@@ -1,0 +1,10 @@
+# AddListResponse
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                | [components.HTTPMetadata](../../models/components/httpmetadata.md)                         | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `object`                                                                                   | [Optional[operations.AddListResponseBody]](../../models/operations/addlistresponsebody.md) | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `unified_list_output`                                                                      | [Optional[components.UnifiedListOutput]](../../models/components/unifiedlistoutput.md)     | :heavy_minus_sign:                                                                         | N/A                                                                                        |

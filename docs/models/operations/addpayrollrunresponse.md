@@ -1,0 +1,10 @@
+# AddPayrollRunResponse
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                     | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `object`                                                                                               | [Optional[operations.AddPayrollRunResponseBody]](../../models/operations/addpayrollrunresponsebody.md) | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `unified_payroll_run_output`                                                                           | [Optional[components.UnifiedPayrollRunOutput]](../../models/components/unifiedpayrollrunoutput.md)     | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

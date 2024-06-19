@@ -1,0 +1,10 @@
+# AddInterviewsResponse
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                     | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `object`                                                                                               | [Optional[operations.AddInterviewsResponseBody]](../../models/operations/addinterviewsresponsebody.md) | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `unified_interview_outputs`                                                                            | List[[components.UnifiedInterviewOutput](../../models/components/unifiedinterviewoutput.md)]           | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

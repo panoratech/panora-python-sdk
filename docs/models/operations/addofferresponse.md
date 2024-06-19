@@ -1,0 +1,10 @@
+# AddOfferResponse
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                  | [components.HTTPMetadata](../../models/components/httpmetadata.md)                           | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `object`                                                                                     | [Optional[operations.AddOfferResponseBody]](../../models/operations/addofferresponsebody.md) | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `unified_offer_output`                                                                       | [Optional[components.UnifiedOfferOutput]](../../models/components/unifiedofferoutput.md)     | :heavy_minus_sign:                                                                           | N/A                                                                                          |

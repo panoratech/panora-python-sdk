@@ -1,0 +1,10 @@
+# AddEeocssResponse
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                    | [components.HTTPMetadata](../../models/components/httpmetadata.md)                             | :heavy_check_mark:                                                                             | N/A                                                                                            |
+| `object`                                                                                       | [Optional[operations.AddEeocssResponseBody]](../../models/operations/addeeocssresponsebody.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
+| `unified_eeocs_outputs`                                                                        | List[[components.UnifiedEeocsOutput](../../models/components/unifiedeeocsoutput.md)]           | :heavy_minus_sign:                                                                             | N/A                                                                                            |

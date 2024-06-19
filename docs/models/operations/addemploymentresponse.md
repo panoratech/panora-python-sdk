@@ -1,0 +1,10 @@
+# AddEmploymentResponse
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                     | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `object`                                                                                               | [Optional[operations.AddEmploymentResponseBody]](../../models/operations/addemploymentresponsebody.md) | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `unified_employment_output`                                                                            | [Optional[components.UnifiedEmploymentOutput]](../../models/components/unifiedemploymentoutput.md)     | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

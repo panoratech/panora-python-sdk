@@ -1,0 +1,10 @@
+# AddPermissionResponse
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                     | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `object`                                                                                               | [Optional[operations.AddPermissionResponseBody]](../../models/operations/addpermissionresponsebody.md) | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `unified_permission_output`                                                                            | [Optional[components.UnifiedPermissionOutput]](../../models/components/unifiedpermissionoutput.md)     | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

@@ -1,0 +1,10 @@
+# AddGroupResponse
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                  | [components.HTTPMetadata](../../models/components/httpmetadata.md)                           | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `object`                                                                                     | [Optional[operations.AddGroupResponseBody]](../../models/operations/addgroupresponsebody.md) | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `unified_group_output`                                                                       | [Optional[components.UnifiedGroupOutput]](../../models/components/unifiedgroupoutput.md)     | :heavy_minus_sign:                                                                           | N/A                                                                                          |

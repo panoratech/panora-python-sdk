@@ -1,0 +1,10 @@
+# AddTagResponse
+
+
+## Fields
+
+| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `http_meta`                                                                              | [components.HTTPMetadata](../../models/components/httpmetadata.md)                       | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `object`                                                                                 | [Optional[operations.AddTagResponseBody]](../../models/operations/addtagresponsebody.md) | :heavy_minus_sign:                                                                       | N/A                                                                                      |
+| `unified_tag_output`                                                                     | [Optional[components.UnifiedTagOutput]](../../models/components/unifiedtagoutput.md)     | :heavy_minus_sign:                                                                       | N/A                                                                                      |

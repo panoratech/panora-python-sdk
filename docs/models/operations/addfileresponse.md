@@ -1,0 +1,10 @@
+# AddFileResponse
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                | [components.HTTPMetadata](../../models/components/httpmetadata.md)                         | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `object`                                                                                   | [Optional[operations.AddFileResponseBody]](../../models/operations/addfileresponsebody.md) | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `unified_file_output`                                                                      | [Optional[components.UnifiedFileOutput]](../../models/components/unifiedfileoutput.md)     | :heavy_minus_sign:                                                                         | N/A                                                                                        |

@@ -1,0 +1,10 @@
+# AddBankinfosResponse
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `http_meta`                                                                                          | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                   | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `object`                                                                                             | [Optional[operations.AddBankinfosResponseBody]](../../models/operations/addbankinfosresponsebody.md) | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |
+| `unified_bank_info_outputs`                                                                          | List[[components.UnifiedBankInfoOutput](../../models/components/unifiedbankinfooutput.md)]           | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |

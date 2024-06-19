@@ -1,0 +1,10 @@
+# AddTaskResponse
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                | [components.HTTPMetadata](../../models/components/httpmetadata.md)                         | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `object`                                                                                   | [Optional[operations.AddTaskResponseBody]](../../models/operations/addtaskresponsebody.md) | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `unified_task_output`                                                                      | [Optional[components.UnifiedTaskOutput]](../../models/components/unifiedtaskoutput.md)     | :heavy_minus_sign:                                                                         | N/A                                                                                        |

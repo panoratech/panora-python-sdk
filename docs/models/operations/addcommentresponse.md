@@ -1,0 +1,10 @@
+# AddCommentResponse
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `http_meta`                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                               | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `object`                                                                                         | [Optional[operations.AddCommentResponseBody]](../../models/operations/addcommentresponsebody.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
+| `unified_comment_output`                                                                         | [Optional[components.UnifiedCommentOutput]](../../models/components/unifiedcommentoutput.md)     | :heavy_minus_sign:                                                                               | N/A                                                                                              |
