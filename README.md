@@ -20,7 +20,7 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 ## SDK Installation
 
 ```bash
-pip install git+<UNSET>.git
+pip install git+https://github.com/panoratech/panora-python-sdk.git
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -69,7 +69,6 @@ if res.string is not None:
 ### [connections](docs/sdks/connections/README.md)
 
 * [handle_o_auth_callback](docs/sdks/connections/README.md#handle_o_auth_callback) - Capture oAuth callback
-* [connections_controller_handle_gorgias_auth_url](docs/sdks/connections/README.md#connections_controller_handle_gorgias_auth_url)
 * [handle_api_key_callback](docs/sdks/connections/README.md#handle_api_key_callback) - Capture api key callback
 * [get_connections](docs/sdks/connections/README.md#get_connections) - List Connections
 

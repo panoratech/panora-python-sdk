@@ -1,12 +1,14 @@
 lockVersion: 2.0.0
 id: a8cd57d2-be20-4473-8659-a01ddc43c52a
 management:
-  docChecksum: 84c5c2750bcc12a2193f758fd197bd09
+  docChecksum: 3e6f37422341625c79db66c3ce938e9f
   docVersion: "1.0"
-  speakeasyVersion: 1.308.2
-  generationVersion: 2.342.6
-  releaseVersion: 0.0.1
-  configChecksum: 9311331dfb72e928408cc25192e941b1
+  speakeasyVersion: 1.310.0
+  generationVersion: 2.347.4
+  releaseVersion: 0.0.2
+  configChecksum: 3328eb186d6e6784e6af891e79f46562
+  repoURL: https://github.com/panoratech/panora-python-sdk.git
+  installationURL: https://github.com/panoratech/panora-python-sdk.git
 features:
   python:
     additionalDependencies: 0.1.0
@@ -119,7 +121,6 @@ generatedFiles:
   - src/panora/filestorage_permission.py
   - src/panora/ticketing_attachments.py
   - src/panora/sdk.py
-  - Makefile
   - py.typed
   - pylintrc
   - scripts/publish.sh
@@ -141,7 +142,6 @@ generatedFiles:
   - src/panora/models/operations/generateapikey.py
   - src/panora/models/operations/refreshaccesstoken.py
   - src/panora/models/operations/handleoauthcallback.py
-  - src/panora/models/operations/connectionscontroller_handlegorgiasauthurl.py
   - src/panora/models/operations/handleapikeycallback.py
   - src/panora/models/operations/getconnections.py
   - src/panora/models/operations/getwebhooksmetadata.py
@@ -692,8 +692,6 @@ generatedFiles:
   - docs/models/operations/refreshaccesstokenresponse.md
   - docs/models/operations/handleoauthcallbackrequest.md
   - docs/models/operations/handleoauthcallbackresponse.md
-  - docs/models/operations/connectionscontrollerhandlegorgiasauthurlrequest.md
-  - docs/models/operations/connectionscontrollerhandlegorgiasauthurlresponse.md
   - docs/models/operations/handleapikeycallbackrequest.md
   - docs/models/operations/handleapikeycallbackresponse.md
   - docs/models/operations/getconnectionsresponse.md

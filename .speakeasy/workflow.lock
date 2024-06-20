@@ -1,20 +1,22 @@
-speakeasyVersion: 1.308.2
+speakeasyVersion: 1.310.0
 sources:
     python-sdk-source-github-main:
         sourceNamespace: python-sdk-source-github-main
-        sourceRevisionDigest: sha256:5bdba502bccaec31d3abd53c9be0eb9f6ae2c6ddf509dd1765d4aeccee6d59d3
-        sourceBlobDigest: sha256:581bc4392b2003d622467da7a034bfe7365437813ad3088e3b96256dc1200e1b
+        sourceRevisionDigest: sha256:8ec5a62a80d83a75db12dc1aa1cdb5b7cc8ff29c688a7770816cdf100e568cf5
+        sourceBlobDigest: sha256:5f843b455abc0e3b59d54706bc682e47e66692c927159b771e688a45f0e47630
         tags:
             - latest
+            - main
 targets:
     my-first-target:
         source: python-sdk-source-github-main
         sourceNamespace: python-sdk-source-github-main
-        sourceRevisionDigest: sha256:5bdba502bccaec31d3abd53c9be0eb9f6ae2c6ddf509dd1765d4aeccee6d59d3
-        sourceBlobDigest: sha256:581bc4392b2003d622467da7a034bfe7365437813ad3088e3b96256dc1200e1b
-        outLocation: /Users/rachid/Panora/panora-python-sdk
+        sourceRevisionDigest: sha256:8ec5a62a80d83a75db12dc1aa1cdb5b7cc8ff29c688a7770816cdf100e568cf5
+        sourceBlobDigest: sha256:5f843b455abc0e3b59d54706bc682e47e66692c927159b771e688a45f0e47630
+        outLocation: /github/workspace/repo
 workflow:
     workflowVersion: 1.0.0
+    speakeasyVersion: latest
     sources:
         python-sdk-source-github-main:
             inputs:
