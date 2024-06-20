@@ -69,55 +69,6 @@ class Connections:
 
     
     
-    def connections_controller_handle_gorgias_auth_url(self, request: operations.ConnectionsControllerHandleGorgiasAuthURLRequest) -> operations.ConnectionsControllerHandleGorgiasAuthURLResponse:
-        hook_ctx = HookContext(operation_id='ConnectionsController_handleGorgiasAuthUrl', oauth2_scopes=[], security_source=self.sdk_configuration.security)
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = base_url + '/connections/gorgias/oauth/install'
-        
-        if callable(self.sdk_configuration.security):
-            headers, query_params = utils.get_security(self.sdk_configuration.security())
-        else:
-            headers, query_params = utils.get_security(self.sdk_configuration.security)
-        
-        query_params = { **utils.get_query_params(request), **query_params }
-        headers['Accept'] = '*/*'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        client = self.sdk_configuration.client
-        
-        try:
-            req = client.prepare_request(requests_http.Request('GET', url, params=query_params, headers=headers))
-            req = self.sdk_configuration.get_hooks().before_request(BeforeRequestContext(hook_ctx), req)
-            http_res = client.send(req)
-        except Exception as e:
-            _, e = self.sdk_configuration.get_hooks().after_error(AfterErrorContext(hook_ctx), None, e)
-            if e is not None:
-                raise e
-
-        if utils.match_status_codes(['4XX','5XX'], http_res.status_code):
-            result, e = self.sdk_configuration.get_hooks().after_error(AfterErrorContext(hook_ctx), http_res, None)
-            if e is not None:
-                raise e
-            if result is not None:
-                http_res = result
-        else:
-            http_res = self.sdk_configuration.get_hooks().after_success(AfterSuccessContext(hook_ctx), http_res)
-            
-        
-        
-        res = operations.ConnectionsControllerHandleGorgiasAuthURLResponse(http_meta=components.HTTPMetadata(request=req, response=http_res))
-        
-        if http_res.status_code == 200:
-            pass
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-        else:
-            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    
     def handle_api_key_callback(self, state: str, body_data_type: components.BodyDataType) -> operations.HandleAPIKeyCallbackResponse:
         r"""Capture api key callback"""
         hook_ctx = HookContext(operation_id='handleApiKeyCallback', oauth2_scopes=[], security_source=self.sdk_configuration.security)
