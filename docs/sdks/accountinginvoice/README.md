@@ -6,7 +6,6 @@
 * [get_invoices](#get_invoices) - List a batch of Invoices
 * [add_invoice](#add_invoice) - Create a Invoice
 * [get_invoice](#get_invoice) - Retrieve a Invoice
-* [add_invoices](#add_invoices) - Add a batch of Invoices
 
 ## get_invoices
 
@@ -121,50 +120,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetInvoiceResponse](../../models/operations/getinvoiceresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_invoices
-
-Add a batch of Invoices
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.accounting_invoice.add_invoices(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedInvoiceInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_token`                                                                     | *str*                                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
-| `x_connection_token`                                                                   | *str*                                                                                  | :heavy_check_mark:                                                                     | The connection token                                                                   |
-| `request_body`                                                                         | List[[components.UnifiedInvoiceInput](../../models/components/unifiedinvoiceinput.md)] | :heavy_check_mark:                                                                     | N/A                                                                                    |
-| `remote_data`                                                                          | *Optional[bool]*                                                                       | :heavy_minus_sign:                                                                     | Set to true to include data from the original Accounting software.                     |
-
-
-### Response
-
-**[operations.AddInvoicesResponse](../../models/operations/addinvoicesresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

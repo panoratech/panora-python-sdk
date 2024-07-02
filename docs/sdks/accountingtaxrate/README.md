@@ -6,7 +6,6 @@
 * [get_tax_rates](#get_tax_rates) - List a batch of TaxRates
 * [add_tax_rate](#add_tax_rate) - Create a TaxRate
 * [get_tax_rate](#get_tax_rate) - Retrieve a TaxRate
-* [add_tax_rates](#add_tax_rates) - Add a batch of TaxRates
 
 ## get_tax_rates
 
@@ -121,50 +120,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetTaxRateResponse](../../models/operations/gettaxrateresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_tax_rates
-
-Add a batch of TaxRates
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.accounting_taxrate.add_tax_rates(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedTaxRateInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_token`                                                                     | *str*                                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
-| `x_connection_token`                                                                   | *str*                                                                                  | :heavy_check_mark:                                                                     | The connection token                                                                   |
-| `request_body`                                                                         | List[[components.UnifiedTaxRateInput](../../models/components/unifiedtaxrateinput.md)] | :heavy_check_mark:                                                                     | N/A                                                                                    |
-| `remote_data`                                                                          | *Optional[bool]*                                                                       | :heavy_minus_sign:                                                                     | Set to true to include data from the original Accounting software.                     |
-
-
-### Response
-
-**[operations.AddTaxRatesResponse](../../models/operations/addtaxratesresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

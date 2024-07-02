@@ -5,7 +5,7 @@ from .sdkconfiguration import SDKConfiguration
 from panora import utils
 from panora._hooks import AfterErrorContext, AfterSuccessContext, BeforeRequestContext, HookContext
 from panora.models import components, errors, operations
-from typing import List, Optional
+from typing import Optional
 
 class CrmEngagements:
     sdk_configuration: SDKConfiguration
@@ -15,13 +15,13 @@ class CrmEngagements:
         
     
     
-    def get_engagements(self, x_connection_token: str, remote_data: Optional[bool] = None, page_size: Optional[float] = None, cursor: Optional[str] = None) -> operations.GetEngagementsResponse:
+    def get_engagements(self, x_connection_token: str, remote_data: Optional[bool] = None, limit: Optional[float] = None, cursor: Optional[str] = None) -> operations.GetEngagementsResponse:
         r"""List a batch of Engagements"""
         hook_ctx = HookContext(operation_id='getEngagements', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         request = operations.GetEngagementsRequest(
             x_connection_token=x_connection_token,
             remote_data=remote_data,
-            page_size=page_size,
+            limit=limit,
             cursor=cursor,
         )
         
@@ -157,66 +157,6 @@ class CrmEngagements:
 
     
     
-    def update_engagement(self, id: str) -> operations.UpdateEngagementResponse:
-        r"""Update a Engagement"""
-        hook_ctx = HookContext(operation_id='updateEngagement', oauth2_scopes=[], security_source=self.sdk_configuration.security)
-        request = operations.UpdateEngagementRequest(
-            id=id,
-        )
-        
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = base_url + '/crm/engagements'
-        
-        if callable(self.sdk_configuration.security):
-            headers, query_params = utils.get_security(self.sdk_configuration.security())
-        else:
-            headers, query_params = utils.get_security(self.sdk_configuration.security)
-        
-        query_params = { **utils.get_query_params(request), **query_params }
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        client = self.sdk_configuration.client
-        
-        try:
-            req = client.prepare_request(requests_http.Request('PATCH', url, params=query_params, headers=headers))
-            req = self.sdk_configuration.get_hooks().before_request(BeforeRequestContext(hook_ctx), req)
-            http_res = client.send(req)
-        except Exception as e:
-            _, e = self.sdk_configuration.get_hooks().after_error(AfterErrorContext(hook_ctx), None, e)
-            if e is not None:
-                raise e
-
-        if utils.match_status_codes(['4XX','5XX'], http_res.status_code):
-            result, e = self.sdk_configuration.get_hooks().after_error(AfterErrorContext(hook_ctx), http_res, None)
-            if e is not None:
-                raise e
-            if result is not None:
-                http_res = result
-        else:
-            http_res = self.sdk_configuration.get_hooks().after_success(AfterSuccessContext(hook_ctx), http_res)
-            
-        
-        
-        res = operations.UpdateEngagementResponse(http_meta=components.HTTPMetadata(request=req, response=http_res))
-        
-        if http_res.status_code == 200:
-            # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[operations.UpdateEngagementResponseBody])
-                res.object = out
-            else:
-                content_type = http_res.headers.get('Content-Type')
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-        else:
-            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    
     def get_engagement(self, id: str, remote_data: Optional[bool] = None) -> operations.GetEngagementResponse:
         r"""Retrieve a Engagement
         Retrieve a engagement from any connected Crm software
@@ -268,82 +208,6 @@ class CrmEngagements:
             if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[operations.GetEngagementResponseBody])
                 res.object = out
-            else:
-                content_type = http_res.headers.get('Content-Type')
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-        else:
-            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    
-    def add_engagements(self, x_connection_token: str, request_body: List[components.UnifiedEngagementInput], remote_data: Optional[bool] = None) -> operations.AddEngagementsResponse:
-        r"""Add a batch of Engagements"""
-        hook_ctx = HookContext(operation_id='addEngagements', oauth2_scopes=[], security_source=self.sdk_configuration.security)
-        request = operations.AddEngagementsRequest(
-            x_connection_token=x_connection_token,
-            remote_data=remote_data,
-            request_body=request_body,
-        )
-        
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = base_url + '/crm/engagements/batch'
-        
-        if callable(self.sdk_configuration.security):
-            headers, query_params = utils.get_security(self.sdk_configuration.security())
-        else:
-            headers, query_params = utils.get_security(self.sdk_configuration.security)
-        
-        headers = { **utils.get_headers(request), **headers }
-        req_content_type, data, form = utils.serialize_request_body(request, operations.AddEngagementsRequest, "request_body", False, False, 'json')
-        if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
-            headers['content-type'] = req_content_type
-        if data is None and form is None:
-            raise Exception('request body is required')
-        query_params = { **utils.get_query_params(request), **query_params }
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        client = self.sdk_configuration.client
-        
-        try:
-            req = client.prepare_request(requests_http.Request('POST', url, params=query_params, data=data, files=form, headers=headers))
-            req = self.sdk_configuration.get_hooks().before_request(BeforeRequestContext(hook_ctx), req)
-            http_res = client.send(req)
-        except Exception as e:
-            _, e = self.sdk_configuration.get_hooks().after_error(AfterErrorContext(hook_ctx), None, e)
-            if e is not None:
-                raise e
-
-        if utils.match_status_codes(['4XX','5XX'], http_res.status_code):
-            result, e = self.sdk_configuration.get_hooks().after_error(AfterErrorContext(hook_ctx), http_res, None)
-            if e is not None:
-                raise e
-            if result is not None:
-                http_res = result
-        else:
-            http_res = self.sdk_configuration.get_hooks().after_success(AfterSuccessContext(hook_ctx), http_res)
-            
-        
-        
-        res = operations.AddEngagementsResponse(http_meta=components.HTTPMetadata(request=req, response=http_res))
-        
-        if http_res.status_code == 200:
-            # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[operations.AddEngagementsResponseBody])
-                res.object = out
-            else:
-                content_type = http_res.headers.get('Content-Type')
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code == 201:
-            # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[List[components.UnifiedEngagementOutput]])
-                res.unified_engagement_outputs = out
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

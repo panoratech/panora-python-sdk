@@ -6,7 +6,6 @@
 * [get_files](#get_files) - List a batch of Files
 * [add_file](#add_file) - Create a File
 * [get_file](#get_file) - Retrieve a File
-* [add_files](#add_files) - Add a batch of Files
 
 ## get_files
 
@@ -121,50 +120,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetFileResponse](../../models/operations/getfileresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_files
-
-Add a batch of Files
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.filestorage_file.add_files(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedFileInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `connection_token`                                                               | *str*                                                                            | :heavy_check_mark:                                                               | N/A                                                                              |
-| `x_connection_token`                                                             | *str*                                                                            | :heavy_check_mark:                                                               | The connection token                                                             |
-| `request_body`                                                                   | List[[components.UnifiedFileInput](../../models/components/unifiedfileinput.md)] | :heavy_check_mark:                                                               | N/A                                                                              |
-| `remote_data`                                                                    | *Optional[bool]*                                                                 | :heavy_minus_sign:                                                               | Set to true to include data from the original Filestorage software.              |
-
-
-### Response
-
-**[operations.AddFilesResponse](../../models/operations/addfilesresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

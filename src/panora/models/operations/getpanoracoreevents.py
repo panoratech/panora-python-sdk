@@ -10,7 +10,7 @@ from typing import Optional
 @dataclasses.dataclass
 class GetPanoraCoreEventsRequest:
     page: Optional[float] = dataclasses.field(default=1, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    page_size: Optional[float] = dataclasses.field(default=10, metadata={'query_param': { 'field_name': 'pageSize', 'style': 'form', 'explode': True }})
+    limit: Optional[float] = dataclasses.field(default=10, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     
 
 

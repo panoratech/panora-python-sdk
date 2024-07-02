@@ -6,7 +6,6 @@
 * [get_companys](#get_companys) - List a batch of Companys
 * [add_hris_company](#add_hris_company) - Create a Company
 * [get_hris_company](#get_hris_company) - Retrieve a Company
-* [add_companys](#add_companys) - Add a batch of Companys
 
 ## get_companys
 
@@ -121,50 +120,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetHrisCompanyResponse](../../models/operations/gethriscompanyresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_companys
-
-Add a batch of Companys
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.hris_company.add_companys(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedCompanyInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_token`                                                                     | *str*                                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
-| `x_connection_token`                                                                   | *str*                                                                                  | :heavy_check_mark:                                                                     | The connection token                                                                   |
-| `request_body`                                                                         | List[[components.UnifiedCompanyInput](../../models/components/unifiedcompanyinput.md)] | :heavy_check_mark:                                                                     | N/A                                                                                    |
-| `remote_data`                                                                          | *Optional[bool]*                                                                       | :heavy_minus_sign:                                                                     | Set to true to include data from the original Hris software.                           |
-
-
-### Response
-
-**[operations.AddCompanysResponse](../../models/operations/addcompanysresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

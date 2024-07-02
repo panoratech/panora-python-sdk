@@ -5,9 +5,7 @@
 
 * [get_tasks](#get_tasks) - List a batch of Tasks
 * [add_task](#add_task) - Create a Task
-* [update_task](#update_task) - Update a Task
 * [get_task](#get_task) - Retrieve a Task
-* [add_tasks](#add_tasks) - Add a batch of Tasks
 
 ## get_tasks
 
@@ -23,7 +21,7 @@ s = panora.Panora(
 )
 
 
-res = s.crm_tasks.get_tasks(x_connection_token='<value>', remote_data=False, page_size=50, cursor='<value>')
+res = s.crm_tasks.get_tasks(x_connection_token='<value>', remote_data=False, limit=50, cursor='<value>')
 
 if res.object is not None:
     # handle response
@@ -37,7 +35,7 @@ if res.object is not None:
 | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
 | `x_connection_token`                                    | *str*                                                   | :heavy_check_mark:                                      | The connection token                                    |
 | `remote_data`                                           | *Optional[bool]*                                        | :heavy_minus_sign:                                      | Set to true to include data from the original software. |
-| `page_size`                                             | *Optional[float]*                                       | :heavy_minus_sign:                                      | Set to get the number of records.                       |
+| `limit`                                                 | *Optional[float]*                                       | :heavy_minus_sign:                                      | Set to get the number of records.                       |
 | `cursor`                                                | *Optional[str]*                                         | :heavy_minus_sign:                                      | Set to get the number of records after this cursor.     |
 
 
@@ -96,44 +94,6 @@ if res.object is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
-## update_task
-
-Update a Task
-
-### Example Usage
-
-```python
-import panora
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.crm_tasks.update_task(id='<value>')
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter          | Type               | Required           | Description        |
-| ------------------ | ------------------ | ------------------ | ------------------ |
-| `id`               | *str*              | :heavy_check_mark: | N/A                |
-
-
-### Response
-
-**[operations.UpdateTaskResponse](../../models/operations/updatetaskresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
 ## get_task
 
 Retrieve a task from any connected Crm software
@@ -167,54 +127,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetTaskResponse](../../models/operations/gettaskresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_tasks
-
-Add a batch of Tasks
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.crm_tasks.add_tasks(x_connection_token='<value>', request_body=[
-    components.UnifiedTaskInput(
-        subject='<value>',
-        content='<value>',
-        status='<value>',
-        field_mappings=components.UnifiedTaskInputFieldMappings(),
-    ),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `x_connection_token`                                                             | *str*                                                                            | :heavy_check_mark:                                                               | The connection token                                                             |
-| `request_body`                                                                   | List[[components.UnifiedTaskInput](../../models/components/unifiedtaskinput.md)] | :heavy_check_mark:                                                               | N/A                                                                              |
-| `remote_data`                                                                    | *Optional[bool]*                                                                 | :heavy_minus_sign:                                                               | Set to true to include data from the original Crm software.                      |
-
-
-### Response
-
-**[operations.AddTasksResponse](../../models/operations/addtasksresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

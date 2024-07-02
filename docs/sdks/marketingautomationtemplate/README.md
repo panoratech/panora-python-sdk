@@ -6,7 +6,6 @@
 * [get_templates](#get_templates) - List a batch of Templates
 * [add_template](#add_template) - Create a Template
 * [get_template](#get_template) - Retrieve a Template
-* [add_templates](#add_templates) - Add a batch of Templates
 
 ## get_templates
 
@@ -121,50 +120,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetTemplateResponse](../../models/operations/gettemplateresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_templates
-
-Add a batch of Templates
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.marketingautomation_template.add_templates(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedTemplateInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_token`                                                                       | *str*                                                                                    | :heavy_check_mark:                                                                       | N/A                                                                                      |
-| `x_connection_token`                                                                     | *str*                                                                                    | :heavy_check_mark:                                                                       | The connection token                                                                     |
-| `request_body`                                                                           | List[[components.UnifiedTemplateInput](../../models/components/unifiedtemplateinput.md)] | :heavy_check_mark:                                                                       | N/A                                                                                      |
-| `remote_data`                                                                            | *Optional[bool]*                                                                         | :heavy_minus_sign:                                                                       | Set to true to include data from the original Marketingautomation software.              |
-
-
-### Response
-
-**[operations.AddTemplatesResponse](../../models/operations/addtemplatesresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

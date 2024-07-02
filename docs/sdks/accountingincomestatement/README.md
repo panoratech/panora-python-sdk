@@ -6,7 +6,6 @@
 * [get_income_statements](#get_income_statements) - List a batch of IncomeStatements
 * [add_income_statement](#add_income_statement) - Create a IncomeStatement
 * [get_income_statement](#get_income_statement) - Retrieve a IncomeStatement
-* [add_income_statements](#add_income_statements) - Add a batch of IncomeStatements
 
 ## get_income_statements
 
@@ -121,50 +120,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetIncomeStatementResponse](../../models/operations/getincomestatementresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_income_statements
-
-Add a batch of IncomeStatements
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.accounting_incomestatement.add_income_statements(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedIncomeStatementInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `connection_token`                                                                                     | *str*                                                                                                  | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
-| `x_connection_token`                                                                                   | *str*                                                                                                  | :heavy_check_mark:                                                                                     | The connection token                                                                                   |
-| `request_body`                                                                                         | List[[components.UnifiedIncomeStatementInput](../../models/components/unifiedincomestatementinput.md)] | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
-| `remote_data`                                                                                          | *Optional[bool]*                                                                                       | :heavy_minus_sign:                                                                                     | Set to true to include data from the original Accounting software.                                     |
-
-
-### Response
-
-**[operations.AddIncomeStatementsResponse](../../models/operations/addincomestatementsresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

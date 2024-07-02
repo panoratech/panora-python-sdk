@@ -6,7 +6,6 @@
 * [get_locations](#get_locations) - List a batch of Locations
 * [add_location](#add_location) - Create a Location
 * [get_location](#get_location) - Retrieve a Location
-* [add_locations](#add_locations) - Add a batch of Locations
 
 ## get_locations
 
@@ -121,50 +120,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetLocationResponse](../../models/operations/getlocationresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_locations
-
-Add a batch of Locations
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.hris_location.add_locations(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedLocationInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_token`                                                                       | *str*                                                                                    | :heavy_check_mark:                                                                       | N/A                                                                                      |
-| `x_connection_token`                                                                     | *str*                                                                                    | :heavy_check_mark:                                                                       | The connection token                                                                     |
-| `request_body`                                                                           | List[[components.UnifiedLocationInput](../../models/components/unifiedlocationinput.md)] | :heavy_check_mark:                                                                       | N/A                                                                                      |
-| `remote_data`                                                                            | *Optional[bool]*                                                                         | :heavy_minus_sign:                                                                       | Set to true to include data from the original Hris software.                             |
-
-
-### Response
-
-**[operations.AddLocationsResponse](../../models/operations/addlocationsresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

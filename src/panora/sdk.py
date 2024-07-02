@@ -365,8 +365,8 @@ class Panora:
         self.ticketing_attachments = TicketingAttachments(self.sdk_configuration)
 
 
-    def get_hello(self) -> operations.GetHelloResponse:
-        hook_ctx = HookContext(operation_id='getHello', oauth2_scopes=[], security_source=self.sdk_configuration.security)
+    def app_controller_hello(self) -> operations.AppControllerHelloResponse:
+        hook_ctx = HookContext(operation_id='AppController_hello', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/'
@@ -400,7 +400,7 @@ class Panora:
             
         
         
-        res = operations.GetHelloResponse(http_meta=components.HTTPMetadata(request=req, response=http_res))
+        res = operations.AppControllerHelloResponse(http_meta=components.HTTPMetadata(request=req, response=http_res))
         
         if http_res.status_code == 200:
             # pylint: disable=no-else-return

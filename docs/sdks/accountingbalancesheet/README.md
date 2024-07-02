@@ -6,7 +6,6 @@
 * [get_balance_sheets](#get_balance_sheets) - List a batch of BalanceSheets
 * [add_balance_sheet](#add_balance_sheet) - Create a BalanceSheet
 * [get_balance_sheet](#get_balance_sheet) - Retrieve a BalanceSheet
-* [add_balance_sheets](#add_balance_sheets) - Add a batch of BalanceSheets
 
 ## get_balance_sheets
 
@@ -121,50 +120,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetBalanceSheetResponse](../../models/operations/getbalancesheetresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_balance_sheets
-
-Add a batch of BalanceSheets
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.accounting_balancesheet.add_balance_sheets(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedBalanceSheetInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `connection_token`                                                                               | *str*                                                                                            | :heavy_check_mark:                                                                               | N/A                                                                                              |
-| `x_connection_token`                                                                             | *str*                                                                                            | :heavy_check_mark:                                                                               | The connection token                                                                             |
-| `request_body`                                                                                   | List[[components.UnifiedBalanceSheetInput](../../models/components/unifiedbalancesheetinput.md)] | :heavy_check_mark:                                                                               | N/A                                                                                              |
-| `remote_data`                                                                                    | *Optional[bool]*                                                                                 | :heavy_minus_sign:                                                                               | Set to true to include data from the original Accounting software.                               |
-
-
-### Response
-
-**[operations.AddBalanceSheetsResponse](../../models/operations/addbalancesheetsresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

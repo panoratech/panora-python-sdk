@@ -7,7 +7,6 @@
 * [add_crm_company](#add_crm_company) - Create a Company
 * [update_company](#update_company) - Update a Company
 * [get_crm_company](#get_crm_company) - Retrieve a Company
-* [add_companies](#add_companies) - Add a batch of Companies
 
 ## get_companies
 
@@ -23,7 +22,7 @@ s = panora.Panora(
 )
 
 
-res = s.crm_companies.get_companies(x_connection_token='<value>', remote_data=False, page_size=50, cursor='<value>')
+res = s.crm_companies.get_companies(x_connection_token='<value>', remote_data=False, limit=50, cursor='<value>')
 
 if res.object is not None:
     # handle response
@@ -37,7 +36,7 @@ if res.object is not None:
 | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
 | `x_connection_token`                                    | *str*                                                   | :heavy_check_mark:                                      | The connection token                                    |
 | `remote_data`                                           | *Optional[bool]*                                        | :heavy_minus_sign:                                      | Set to true to include data from the original software. |
-| `page_size`                                             | *Optional[float]*                                       | :heavy_minus_sign:                                      | Set to get the number of records.                       |
+| `limit`                                                 | *Optional[float]*                                       | :heavy_minus_sign:                                      | Set to get the number of records.                       |
 | `cursor`                                                | *Optional[str]*                                         | :heavy_minus_sign:                                      | Set to get the number of records after this cursor.     |
 
 
@@ -162,49 +161,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetCrmCompanyResponse](../../models/operations/getcrmcompanyresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_companies
-
-Add a batch of Companies
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.crm_companies.add_companies(x_connection_token='<value>', request_body=[
-    components.UnifiedCompanyInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `x_connection_token`                                                                   | *str*                                                                                  | :heavy_check_mark:                                                                     | The connection token                                                                   |
-| `request_body`                                                                         | List[[components.UnifiedCompanyInput](../../models/components/unifiedcompanyinput.md)] | :heavy_check_mark:                                                                     | N/A                                                                                    |
-| `remote_data`                                                                          | *Optional[bool]*                                                                       | :heavy_minus_sign:                                                                     | Set to true to include data from the original Crm software.                            |
-
-
-### Response
-
-**[operations.AddCompaniesResponse](../../models/operations/addcompaniesresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

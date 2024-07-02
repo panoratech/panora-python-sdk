@@ -15,13 +15,13 @@ class TicketingCollections:
         
     
     
-    def get_collections(self, x_connection_token: str, remote_data: Optional[bool] = None, page_size: Optional[float] = None, cursor: Optional[str] = None) -> operations.GetCollectionsResponse:
+    def get_collections(self, x_connection_token: str, remote_data: Optional[bool] = None, limit: Optional[float] = None, cursor: Optional[str] = None) -> operations.GetCollectionsResponse:
         r"""List a batch of Collections"""
         hook_ctx = HookContext(operation_id='getCollections', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         request = operations.GetCollectionsRequest(
             x_connection_token=x_connection_token,
             remote_data=remote_data,
-            page_size=page_size,
+            limit=limit,
             cursor=cursor,
         )
         

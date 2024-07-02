@@ -6,7 +6,6 @@
 * [get_timeoffs](#get_timeoffs) - List a batch of Timeoffs
 * [add_timeoff](#add_timeoff) - Create a Timeoff
 * [get_timeoff](#get_timeoff) - Retrieve a Timeoff
-* [add_timeoffs](#add_timeoffs) - Add a batch of Timeoffs
 
 ## get_timeoffs
 
@@ -121,50 +120,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetTimeoffResponse](../../models/operations/gettimeoffresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_timeoffs
-
-Add a batch of Timeoffs
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.hris_timeoff.add_timeoffs(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedTimeoffInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_token`                                                                     | *str*                                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
-| `x_connection_token`                                                                   | *str*                                                                                  | :heavy_check_mark:                                                                     | The connection token                                                                   |
-| `request_body`                                                                         | List[[components.UnifiedTimeoffInput](../../models/components/unifiedtimeoffinput.md)] | :heavy_check_mark:                                                                     | N/A                                                                                    |
-| `remote_data`                                                                          | *Optional[bool]*                                                                       | :heavy_minus_sign:                                                                     | Set to true to include data from the original Hris software.                           |
-
-
-### Response
-
-**[operations.AddTimeoffsResponse](../../models/operations/addtimeoffsresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

@@ -6,7 +6,6 @@
 * [get_jobs](#get_jobs) - List a batch of Jobs
 * [add_job](#add_job) - Create a Job
 * [get_job](#get_job) - Retrieve a Job
-* [add_jobs](#add_jobs) - Add a batch of Jobs
 
 ## get_jobs
 
@@ -121,50 +120,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetJobResponse](../../models/operations/getjobresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_jobs
-
-Add a batch of Jobs
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.ats_job.add_jobs(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedJobInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `connection_token`                                                             | *str*                                                                          | :heavy_check_mark:                                                             | N/A                                                                            |
-| `x_connection_token`                                                           | *str*                                                                          | :heavy_check_mark:                                                             | The connection token                                                           |
-| `request_body`                                                                 | List[[components.UnifiedJobInput](../../models/components/unifiedjobinput.md)] | :heavy_check_mark:                                                             | N/A                                                                            |
-| `remote_data`                                                                  | *Optional[bool]*                                                               | :heavy_minus_sign:                                                             | Set to true to include data from the original Ats software.                    |
-
-
-### Response
-
-**[operations.AddJobsResponse](../../models/operations/addjobsresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

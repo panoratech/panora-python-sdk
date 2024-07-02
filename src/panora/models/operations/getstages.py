@@ -15,7 +15,7 @@ class GetStagesRequest:
     r"""The connection token"""
     remote_data: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'remote_data', 'style': 'form', 'explode': True }})
     r"""Set to true to include data from the original software."""
-    page_size: Optional[float] = dataclasses.field(default=50, metadata={'query_param': { 'field_name': 'pageSize', 'style': 'form', 'explode': True }})
+    limit: Optional[float] = dataclasses.field(default=50, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     r"""Set to get the number of records."""
     cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
     r"""Set to get the number of records after this cursor."""

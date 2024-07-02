@@ -15,13 +15,13 @@ class CrmStages:
         
     
     
-    def get_stages(self, x_connection_token: str, remote_data: Optional[bool] = None, page_size: Optional[float] = None, cursor: Optional[str] = None) -> operations.GetStagesResponse:
+    def get_stages(self, x_connection_token: str, remote_data: Optional[bool] = None, limit: Optional[float] = None, cursor: Optional[str] = None) -> operations.GetStagesResponse:
         r"""List a batch of Stages"""
         hook_ctx = HookContext(operation_id='getStages', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         request = operations.GetStagesRequest(
             x_connection_token=x_connection_token,
             remote_data=remote_data,
-            page_size=page_size,
+            limit=limit,
             cursor=cursor,
         )
         

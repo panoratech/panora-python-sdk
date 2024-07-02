@@ -15,13 +15,13 @@ class TicketingUsers:
         
     
     
-    def get_ticketing_users(self, x_connection_token: str, remote_data: Optional[bool] = None, page_size: Optional[float] = None, cursor: Optional[str] = None) -> operations.GetTicketingUsersResponse:
+    def get_ticketing_users(self, x_connection_token: str, remote_data: Optional[bool] = None, limit: Optional[float] = None, cursor: Optional[str] = None) -> operations.GetTicketingUsersResponse:
         r"""List a batch of Users"""
         hook_ctx = HookContext(operation_id='getTicketingUsers', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         request = operations.GetTicketingUsersRequest(
             x_connection_token=x_connection_token,
             remote_data=remote_data,
-            page_size=page_size,
+            limit=limit,
             cursor=cursor,
         )
         

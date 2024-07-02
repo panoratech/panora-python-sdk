@@ -20,7 +20,7 @@ s = panora.Panora(
 )
 
 
-res = s.ticketing_contacts.get_ticketing_contacts(x_connection_token='<value>', remote_data=False, page_size=50, cursor='<value>')
+res = s.ticketing_contacts.get_ticketing_contacts(x_connection_token='<value>', remote_data=False, limit=50, cursor='<value>')
 
 if res.object is not None:
     # handle response
@@ -34,7 +34,7 @@ if res.object is not None:
 | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
 | `x_connection_token`                                    | *str*                                                   | :heavy_check_mark:                                      | The connection token                                    |
 | `remote_data`                                           | *Optional[bool]*                                        | :heavy_minus_sign:                                      | Set to true to include data from the original software. |
-| `page_size`                                             | *Optional[float]*                                       | :heavy_minus_sign:                                      | Set to get the number of records.                       |
+| `limit`                                                 | *Optional[float]*                                       | :heavy_minus_sign:                                      | Set to get the number of records.                       |
 | `cursor`                                                | *Optional[str]*                                         | :heavy_minus_sign:                                      | Set to get the number of records after this cursor.     |
 
 

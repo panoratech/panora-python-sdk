@@ -7,11 +7,11 @@ Unified Panora API: The Panora API description
 
 ### Available Operations
 
-* [get_hello](#get_hello)
+* [app_controller_hello](#app_controller_hello)
 * [get_health](#get_health)
 * [get_hello_protected](#get_hello_protected)
 
-## get_hello
+## app_controller_hello
 
 ### Example Usage
 
@@ -23,7 +23,7 @@ s = panora.Panora(
 )
 
 
-res = s.get_hello()
+res = s.app_controller_hello()
 
 if res.string is not None:
     # handle response
@@ -34,7 +34,7 @@ if res.string is not None:
 
 ### Response
 
-**[operations.GetHelloResponse](../../models/operations/gethelloresponse.md)**
+**[operations.AppControllerHelloResponse](../../models/operations/appcontrollerhelloresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

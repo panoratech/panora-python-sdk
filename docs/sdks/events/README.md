@@ -20,7 +20,7 @@ s = panora.Panora(
 )
 
 
-res = s.events.get_panora_core_events(page=1, page_size=10)
+res = s.events.get_panora_core_events(page=1, limit=10)
 
 if res is not None:
     # handle response
@@ -33,7 +33,7 @@ if res is not None:
 | Parameter          | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | `page`             | *Optional[float]*  | :heavy_minus_sign: | N/A                |
-| `page_size`        | *Optional[float]*  | :heavy_minus_sign: | N/A                |
+| `limit`            | *Optional[float]*  | :heavy_minus_sign: | N/A                |
 
 
 ### Response
