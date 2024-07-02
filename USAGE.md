@@ -7,7 +7,7 @@ s = panora.Panora(
 )
 
 
-res = s.get_hello()
+res = s.app_controller_hello()
 
 if res.string is not None:
     # handle response

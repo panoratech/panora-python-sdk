@@ -37,7 +37,7 @@ s = panora.Panora(
 )
 
 
-res = s.get_hello()
+res = s.app_controller_hello()
 
 if res.string is not None:
     # handle response
@@ -51,7 +51,7 @@ if res.string is not None:
 
 ### [Panora SDK](docs/sdks/panora/README.md)
 
-* [get_hello](docs/sdks/panora/README.md#get_hello)
+* [app_controller_hello](docs/sdks/panora/README.md#app_controller_hello)
 * [get_health](docs/sdks/panora/README.md#get_health)
 * [get_hello_protected](docs/sdks/panora/README.md#get_hello_protected)
 
@@ -95,9 +95,7 @@ if res.string is not None:
 
 * [get_tickets](docs/sdks/ticketingtickets/README.md#get_tickets) - List a batch of Tickets
 * [add_ticket](docs/sdks/ticketingtickets/README.md#add_ticket) - Create a Ticket
-* [update_ticket](docs/sdks/ticketingtickets/README.md#update_ticket) - Update a Ticket
 * [get_ticket](docs/sdks/ticketingtickets/README.md#get_ticket) - Retrieve a Ticket
-* [add_tickets](docs/sdks/ticketingtickets/README.md#add_tickets) - Add a batch of Tickets
 
 ### [ticketing_users](docs/sdks/ticketingusers/README.md)
 
@@ -120,38 +118,30 @@ if res.string is not None:
 * [add_crm_company](docs/sdks/crmcompanies/README.md#add_crm_company) - Create a Company
 * [update_company](docs/sdks/crmcompanies/README.md#update_company) - Update a Company
 * [get_crm_company](docs/sdks/crmcompanies/README.md#get_crm_company) - Retrieve a Company
-* [add_companies](docs/sdks/crmcompanies/README.md#add_companies) - Add a batch of Companies
 
 ### [crm_contacts](docs/sdks/crmcontacts/README.md)
 
-* [get_crm_contacts](docs/sdks/crmcontacts/README.md#get_crm_contacts) - List a batch of CRM Contacts
+* [list_crm_contacts](docs/sdks/crmcontacts/README.md#list_crm_contacts) - List CRM Contacts
 * [add_crm_contact](docs/sdks/crmcontacts/README.md#add_crm_contact) - Create CRM Contact
-* [update_contact](docs/sdks/crmcontacts/README.md#update_contact) - Update a CRM Contact
 * [get_crm_contact](docs/sdks/crmcontacts/README.md#get_crm_contact) - Retrieve a CRM Contact
-* [add_crm_contacts](docs/sdks/crmcontacts/README.md#add_crm_contacts) - Add a batch of CRM Contacts
 
 ### [crm_deals](docs/sdks/crmdeals/README.md)
 
 * [get_deals](docs/sdks/crmdeals/README.md#get_deals) - List a batch of Deals
 * [add_deal](docs/sdks/crmdeals/README.md#add_deal) - Create a Deal
 * [get_deal](docs/sdks/crmdeals/README.md#get_deal) - Retrieve a Deal
-* [update_deal](docs/sdks/crmdeals/README.md#update_deal) - Update a Deal
-* [add_deals](docs/sdks/crmdeals/README.md#add_deals) - Add a batch of Deals
 
 ### [crm_engagements](docs/sdks/crmengagements/README.md)
 
 * [get_engagements](docs/sdks/crmengagements/README.md#get_engagements) - List a batch of Engagements
 * [add_engagement](docs/sdks/crmengagements/README.md#add_engagement) - Create a Engagement
-* [update_engagement](docs/sdks/crmengagements/README.md#update_engagement) - Update a Engagement
 * [get_engagement](docs/sdks/crmengagements/README.md#get_engagement) - Retrieve a Engagement
-* [add_engagements](docs/sdks/crmengagements/README.md#add_engagements) - Add a batch of Engagements
 
 ### [crm_notes](docs/sdks/crmnotes/README.md)
 
 * [get_notes](docs/sdks/crmnotes/README.md#get_notes) - List a batch of Notes
 * [add_note](docs/sdks/crmnotes/README.md#add_note) - Create a Note
 * [get_note](docs/sdks/crmnotes/README.md#get_note) - Retrieve a Note
-* [add_notes](docs/sdks/crmnotes/README.md#add_notes) - Add a batch of Notes
 
 ### [crm_stages](docs/sdks/crmstages/README.md)
 
@@ -162,9 +152,7 @@ if res.string is not None:
 
 * [get_tasks](docs/sdks/crmtasks/README.md#get_tasks) - List a batch of Tasks
 * [add_task](docs/sdks/crmtasks/README.md#add_task) - Create a Task
-* [update_task](docs/sdks/crmtasks/README.md#update_task) - Update a Task
 * [get_task](docs/sdks/crmtasks/README.md#get_task) - Retrieve a Task
-* [add_tasks](docs/sdks/crmtasks/README.md#add_tasks) - Add a batch of Tasks
 
 ### [crm_users](docs/sdks/crmusers/README.md)
 
@@ -181,7 +169,6 @@ if res.string is not None:
 * [get_comments](docs/sdks/ticketingcomments/README.md#get_comments) - List a batch of Comments
 * [add_comment](docs/sdks/ticketingcomments/README.md#add_comment) - Create a Comment
 * [get_comment](docs/sdks/ticketingcomments/README.md#get_comment) - Retrieve a Comment
-* [add_comments](docs/sdks/ticketingcomments/README.md#add_comments) - Add a batch of Comments
 
 ### [ticketing_tags](docs/sdks/ticketingtags/README.md)
 
@@ -261,456 +248,390 @@ if res.string is not None:
 * [get_bankinfos](docs/sdks/hrisbankinfo/README.md#get_bankinfos) - List a batch of Bankinfos
 * [add_bankinfo](docs/sdks/hrisbankinfo/README.md#add_bankinfo) - Create a Bankinfo
 * [get_bankinfo](docs/sdks/hrisbankinfo/README.md#get_bankinfo) - Retrieve a Bankinfo
-* [add_bankinfos](docs/sdks/hrisbankinfo/README.md#add_bankinfos) - Add a batch of Bankinfos
 
 ### [hris_benefit](docs/sdks/hrisbenefit/README.md)
 
 * [get_benefits](docs/sdks/hrisbenefit/README.md#get_benefits) - List a batch of Benefits
 * [add_benefit](docs/sdks/hrisbenefit/README.md#add_benefit) - Create a Benefit
 * [get_benefit](docs/sdks/hrisbenefit/README.md#get_benefit) - Retrieve a Benefit
-* [add_benefits](docs/sdks/hrisbenefit/README.md#add_benefits) - Add a batch of Benefits
 
 ### [hris_company](docs/sdks/hriscompany/README.md)
 
 * [get_companys](docs/sdks/hriscompany/README.md#get_companys) - List a batch of Companys
 * [add_hris_company](docs/sdks/hriscompany/README.md#add_hris_company) - Create a Company
 * [get_hris_company](docs/sdks/hriscompany/README.md#get_hris_company) - Retrieve a Company
-* [add_companys](docs/sdks/hriscompany/README.md#add_companys) - Add a batch of Companys
 
 ### [hris_dependent](docs/sdks/hrisdependent/README.md)
 
 * [get_dependents](docs/sdks/hrisdependent/README.md#get_dependents) - List a batch of Dependents
 * [add_dependent](docs/sdks/hrisdependent/README.md#add_dependent) - Create a Dependent
 * [get_dependent](docs/sdks/hrisdependent/README.md#get_dependent) - Retrieve a Dependent
-* [add_dependents](docs/sdks/hrisdependent/README.md#add_dependents) - Add a batch of Dependents
 
 ### [hris_employeepayrollrun](docs/sdks/hrisemployeepayrollrun/README.md)
 
 * [get_employee_payroll_runs](docs/sdks/hrisemployeepayrollrun/README.md#get_employee_payroll_runs) - List a batch of EmployeePayrollRuns
 * [add_employee_payroll_run](docs/sdks/hrisemployeepayrollrun/README.md#add_employee_payroll_run) - Create a EmployeePayrollRun
 * [get_employee_payroll_run](docs/sdks/hrisemployeepayrollrun/README.md#get_employee_payroll_run) - Retrieve a EmployeePayrollRun
-* [add_employee_payroll_runs](docs/sdks/hrisemployeepayrollrun/README.md#add_employee_payroll_runs) - Add a batch of EmployeePayrollRuns
 
 ### [hris_employee](docs/sdks/hrisemployee/README.md)
 
 * [get_employees](docs/sdks/hrisemployee/README.md#get_employees) - List a batch of Employees
 * [add_employee](docs/sdks/hrisemployee/README.md#add_employee) - Create a Employee
 * [get_employee](docs/sdks/hrisemployee/README.md#get_employee) - Retrieve a Employee
-* [add_employees](docs/sdks/hrisemployee/README.md#add_employees) - Add a batch of Employees
 
 ### [hris_employerbenefit](docs/sdks/hrisemployerbenefit/README.md)
 
 * [get_employer_benefits](docs/sdks/hrisemployerbenefit/README.md#get_employer_benefits) - List a batch of EmployerBenefits
 * [add_employer_benefit](docs/sdks/hrisemployerbenefit/README.md#add_employer_benefit) - Create a EmployerBenefit
 * [get_employer_benefit](docs/sdks/hrisemployerbenefit/README.md#get_employer_benefit) - Retrieve a EmployerBenefit
-* [add_employer_benefits](docs/sdks/hrisemployerbenefit/README.md#add_employer_benefits) - Add a batch of EmployerBenefits
 
 ### [hris_employment](docs/sdks/hrisemployment/README.md)
 
 * [get_employments](docs/sdks/hrisemployment/README.md#get_employments) - List a batch of Employments
 * [add_employment](docs/sdks/hrisemployment/README.md#add_employment) - Create a Employment
 * [get_employment](docs/sdks/hrisemployment/README.md#get_employment) - Retrieve a Employment
-* [add_employments](docs/sdks/hrisemployment/README.md#add_employments) - Add a batch of Employments
 
 ### [hris_group](docs/sdks/hrisgroup/README.md)
 
 * [get_groups](docs/sdks/hrisgroup/README.md#get_groups) - List a batch of Groups
 * [add_group](docs/sdks/hrisgroup/README.md#add_group) - Create a Group
 * [get_group](docs/sdks/hrisgroup/README.md#get_group) - Retrieve a Group
-* [add_groups](docs/sdks/hrisgroup/README.md#add_groups) - Add a batch of Groups
 
 ### [hris_location](docs/sdks/hrislocation/README.md)
 
 * [get_locations](docs/sdks/hrislocation/README.md#get_locations) - List a batch of Locations
 * [add_location](docs/sdks/hrislocation/README.md#add_location) - Create a Location
 * [get_location](docs/sdks/hrislocation/README.md#get_location) - Retrieve a Location
-* [add_locations](docs/sdks/hrislocation/README.md#add_locations) - Add a batch of Locations
 
 ### [hris_paygroup](docs/sdks/hrispaygroup/README.md)
 
 * [get_pay_groups](docs/sdks/hrispaygroup/README.md#get_pay_groups) - List a batch of PayGroups
 * [add_pay_group](docs/sdks/hrispaygroup/README.md#add_pay_group) - Create a PayGroup
 * [get_pay_group](docs/sdks/hrispaygroup/README.md#get_pay_group) - Retrieve a PayGroup
-* [add_pay_groups](docs/sdks/hrispaygroup/README.md#add_pay_groups) - Add a batch of PayGroups
 
 ### [hris_payrollrun](docs/sdks/hrispayrollrun/README.md)
 
 * [get_payroll_runs](docs/sdks/hrispayrollrun/README.md#get_payroll_runs) - List a batch of PayrollRuns
 * [add_payroll_run](docs/sdks/hrispayrollrun/README.md#add_payroll_run) - Create a PayrollRun
 * [get_payroll_run](docs/sdks/hrispayrollrun/README.md#get_payroll_run) - Retrieve a PayrollRun
-* [add_payroll_runs](docs/sdks/hrispayrollrun/README.md#add_payroll_runs) - Add a batch of PayrollRuns
 
 ### [hris_timeoff](docs/sdks/hristimeoff/README.md)
 
 * [get_timeoffs](docs/sdks/hristimeoff/README.md#get_timeoffs) - List a batch of Timeoffs
 * [add_timeoff](docs/sdks/hristimeoff/README.md#add_timeoff) - Create a Timeoff
 * [get_timeoff](docs/sdks/hristimeoff/README.md#get_timeoff) - Retrieve a Timeoff
-* [add_timeoffs](docs/sdks/hristimeoff/README.md#add_timeoffs) - Add a batch of Timeoffs
 
 ### [hris_timeoffbalance](docs/sdks/hristimeoffbalance/README.md)
 
 * [get_timeoff_balances](docs/sdks/hristimeoffbalance/README.md#get_timeoff_balances) - List a batch of TimeoffBalances
 * [add_timeoff_balance](docs/sdks/hristimeoffbalance/README.md#add_timeoff_balance) - Create a TimeoffBalance
 * [get_timeoff_balance](docs/sdks/hristimeoffbalance/README.md#get_timeoff_balance) - Retrieve a TimeoffBalance
-* [add_timeoff_balances](docs/sdks/hristimeoffbalance/README.md#add_timeoff_balances) - Add a batch of TimeoffBalances
 
 ### [marketingautomation_action](docs/sdks/marketingautomationaction/README.md)
 
 * [get_actions](docs/sdks/marketingautomationaction/README.md#get_actions) - List a batch of Actions
 * [add_action](docs/sdks/marketingautomationaction/README.md#add_action) - Create a Action
 * [get_action](docs/sdks/marketingautomationaction/README.md#get_action) - Retrieve a Action
-* [add_actions](docs/sdks/marketingautomationaction/README.md#add_actions) - Add a batch of Actions
 
 ### [marketingautomation_automation](docs/sdks/marketingautomationautomation/README.md)
 
 * [get_automations](docs/sdks/marketingautomationautomation/README.md#get_automations) - List a batch of Automations
 * [add_automation](docs/sdks/marketingautomationautomation/README.md#add_automation) - Create a Automation
 * [get_automation](docs/sdks/marketingautomationautomation/README.md#get_automation) - Retrieve a Automation
-* [add_automations](docs/sdks/marketingautomationautomation/README.md#add_automations) - Add a batch of Automations
 
 ### [marketingautomation_campaign](docs/sdks/marketingautomationcampaign/README.md)
 
 * [get_campaigns](docs/sdks/marketingautomationcampaign/README.md#get_campaigns) - List a batch of Campaigns
 * [add_campaign](docs/sdks/marketingautomationcampaign/README.md#add_campaign) - Create a Campaign
 * [get_campaign](docs/sdks/marketingautomationcampaign/README.md#get_campaign) - Retrieve a Campaign
-* [add_campaigns](docs/sdks/marketingautomationcampaign/README.md#add_campaigns) - Add a batch of Campaigns
 
 ### [marketingautomation_contact](docs/sdks/marketingautomationcontact/README.md)
 
 * [get_marketing_automation_contacts](docs/sdks/marketingautomationcontact/README.md#get_marketing_automation_contacts) - List a batch of Contacts
 * [add_marketing_automation_contact](docs/sdks/marketingautomationcontact/README.md#add_marketing_automation_contact) - Create a Contact
 * [get_marketing_automation_contact](docs/sdks/marketingautomationcontact/README.md#get_marketing_automation_contact) - Retrieve a Contact
-* [add_marketing_automation_contacts](docs/sdks/marketingautomationcontact/README.md#add_marketing_automation_contacts) - Add a batch of Contacts
 
 ### [marketingautomation_email](docs/sdks/marketingautomationemail/README.md)
 
 * [get_emails](docs/sdks/marketingautomationemail/README.md#get_emails) - List a batch of Emails
 * [add_email](docs/sdks/marketingautomationemail/README.md#add_email) - Create a Email
 * [get_email](docs/sdks/marketingautomationemail/README.md#get_email) - Retrieve a Email
-* [add_emails](docs/sdks/marketingautomationemail/README.md#add_emails) - Add a batch of Emails
 
 ### [marketingautomation_event](docs/sdks/marketingautomationevent/README.md)
 
 * [get_marketing_automation_events](docs/sdks/marketingautomationevent/README.md#get_marketing_automation_events) - List a batch of Events
 * [add_event](docs/sdks/marketingautomationevent/README.md#add_event) - Create a Event
 * [get_event](docs/sdks/marketingautomationevent/README.md#get_event) - Retrieve a Event
-* [add_events](docs/sdks/marketingautomationevent/README.md#add_events) - Add a batch of Events
 
 ### [marketingautomation_list](docs/sdks/marketingautomationlist/README.md)
 
 * [get_lists](docs/sdks/marketingautomationlist/README.md#get_lists) - List a batch of Lists
 * [add_list](docs/sdks/marketingautomationlist/README.md#add_list) - Create a List
 * [get_list](docs/sdks/marketingautomationlist/README.md#get_list) - Retrieve a List
-* [add_lists](docs/sdks/marketingautomationlist/README.md#add_lists) - Add a batch of Lists
 
 ### [marketingautomation_message](docs/sdks/marketingautomationmessage/README.md)
 
 * [get_messages](docs/sdks/marketingautomationmessage/README.md#get_messages) - List a batch of Messages
 * [add_message](docs/sdks/marketingautomationmessage/README.md#add_message) - Create a Message
 * [get_message](docs/sdks/marketingautomationmessage/README.md#get_message) - Retrieve a Message
-* [add_messages](docs/sdks/marketingautomationmessage/README.md#add_messages) - Add a batch of Messages
 
 ### [marketingautomation_template](docs/sdks/marketingautomationtemplate/README.md)
 
 * [get_templates](docs/sdks/marketingautomationtemplate/README.md#get_templates) - List a batch of Templates
 * [add_template](docs/sdks/marketingautomationtemplate/README.md#add_template) - Create a Template
 * [get_template](docs/sdks/marketingautomationtemplate/README.md#get_template) - Retrieve a Template
-* [add_templates](docs/sdks/marketingautomationtemplate/README.md#add_templates) - Add a batch of Templates
 
 ### [marketingautomation_user](docs/sdks/marketingautomationuser/README.md)
 
 * [get_marketing_automation_users](docs/sdks/marketingautomationuser/README.md#get_marketing_automation_users) - List a batch of Users
 * [add_marketing_automation_user](docs/sdks/marketingautomationuser/README.md#add_marketing_automation_user) - Create a User
 * [get_marketing_automation_user](docs/sdks/marketingautomationuser/README.md#get_marketing_automation_user) - Retrieve a User
-* [add_marketing_automation_users](docs/sdks/marketingautomationuser/README.md#add_marketing_automation_users) - Add a batch of Users
 
 ### [ats_activity](docs/sdks/atsactivity/README.md)
 
 * [get_activitys](docs/sdks/atsactivity/README.md#get_activitys) - List a batch of Activitys
 * [add_activity](docs/sdks/atsactivity/README.md#add_activity) - Create a Activity
 * [get_activity](docs/sdks/atsactivity/README.md#get_activity) - Retrieve a Activity
-* [add_activitys](docs/sdks/atsactivity/README.md#add_activitys) - Add a batch of Activitys
 
 ### [ats_application](docs/sdks/atsapplication/README.md)
 
 * [get_applications](docs/sdks/atsapplication/README.md#get_applications) - List a batch of Applications
 * [add_application](docs/sdks/atsapplication/README.md#add_application) - Create a Application
 * [get_application](docs/sdks/atsapplication/README.md#get_application) - Retrieve a Application
-* [add_applications](docs/sdks/atsapplication/README.md#add_applications) - Add a batch of Applications
 
 ### [ats_attachment](docs/sdks/atsattachment/README.md)
 
 * [get_ats_attachments](docs/sdks/atsattachment/README.md#get_ats_attachments) - List a batch of Attachments
 * [add_ats_attachment](docs/sdks/atsattachment/README.md#add_ats_attachment) - Create a Attachment
 * [get_ats_attachment](docs/sdks/atsattachment/README.md#get_ats_attachment) - Retrieve a Attachment
-* [add_ats_attachments](docs/sdks/atsattachment/README.md#add_ats_attachments) - Add a batch of Attachments
 
 ### [ats_candidate](docs/sdks/atscandidate/README.md)
 
 * [get_candidates](docs/sdks/atscandidate/README.md#get_candidates) - List a batch of Candidates
 * [add_candidate](docs/sdks/atscandidate/README.md#add_candidate) - Create a Candidate
 * [get_candidate](docs/sdks/atscandidate/README.md#get_candidate) - Retrieve a Candidate
-* [add_candidates](docs/sdks/atscandidate/README.md#add_candidates) - Add a batch of Candidates
 
 ### [ats_department](docs/sdks/atsdepartment/README.md)
 
 * [get_departments](docs/sdks/atsdepartment/README.md#get_departments) - List a batch of Departments
 * [add_department](docs/sdks/atsdepartment/README.md#add_department) - Create a Department
 * [get_department](docs/sdks/atsdepartment/README.md#get_department) - Retrieve a Department
-* [add_departments](docs/sdks/atsdepartment/README.md#add_departments) - Add a batch of Departments
 
 ### [ats_interview](docs/sdks/atsinterview/README.md)
 
 * [get_interviews](docs/sdks/atsinterview/README.md#get_interviews) - List a batch of Interviews
 * [add_interview](docs/sdks/atsinterview/README.md#add_interview) - Create a Interview
 * [get_interview](docs/sdks/atsinterview/README.md#get_interview) - Retrieve a Interview
-* [add_interviews](docs/sdks/atsinterview/README.md#add_interviews) - Add a batch of Interviews
 
 ### [ats_jobinterviewstage](docs/sdks/atsjobinterviewstage/README.md)
 
 * [get_job_interview_stages](docs/sdks/atsjobinterviewstage/README.md#get_job_interview_stages) - List a batch of JobInterviewStages
 * [add_job_interview_stage](docs/sdks/atsjobinterviewstage/README.md#add_job_interview_stage) - Create a JobInterviewStage
 * [get_job_interview_stage](docs/sdks/atsjobinterviewstage/README.md#get_job_interview_stage) - Retrieve a JobInterviewStage
-* [add_job_interview_stages](docs/sdks/atsjobinterviewstage/README.md#add_job_interview_stages) - Add a batch of JobInterviewStages
 
 ### [ats_job](docs/sdks/atsjob/README.md)
 
 * [get_jobs](docs/sdks/atsjob/README.md#get_jobs) - List a batch of Jobs
 * [add_job](docs/sdks/atsjob/README.md#add_job) - Create a Job
 * [get_job](docs/sdks/atsjob/README.md#get_job) - Retrieve a Job
-* [add_jobs](docs/sdks/atsjob/README.md#add_jobs) - Add a batch of Jobs
 
 ### [ats_offer](docs/sdks/atsoffer/README.md)
 
 * [get_offers](docs/sdks/atsoffer/README.md#get_offers) - List a batch of Offers
 * [add_offer](docs/sdks/atsoffer/README.md#add_offer) - Create a Offer
 * [get_offer](docs/sdks/atsoffer/README.md#get_offer) - Retrieve a Offer
-* [add_offers](docs/sdks/atsoffer/README.md#add_offers) - Add a batch of Offers
 
 ### [ats_office](docs/sdks/atsoffice/README.md)
 
 * [get_offices](docs/sdks/atsoffice/README.md#get_offices) - List a batch of Offices
 * [add_office](docs/sdks/atsoffice/README.md#add_office) - Create a Office
 * [get_office](docs/sdks/atsoffice/README.md#get_office) - Retrieve a Office
-* [add_offices](docs/sdks/atsoffice/README.md#add_offices) - Add a batch of Offices
 
 ### [ats_rejectreason](docs/sdks/atsrejectreason/README.md)
 
 * [get_reject_reasons](docs/sdks/atsrejectreason/README.md#get_reject_reasons) - List a batch of RejectReasons
 * [add_reject_reason](docs/sdks/atsrejectreason/README.md#add_reject_reason) - Create a RejectReason
 * [get_reject_reason](docs/sdks/atsrejectreason/README.md#get_reject_reason) - Retrieve a RejectReason
-* [add_reject_reasons](docs/sdks/atsrejectreason/README.md#add_reject_reasons) - Add a batch of RejectReasons
 
 ### [ats_scorecard](docs/sdks/atsscorecard/README.md)
 
 * [get_score_cards](docs/sdks/atsscorecard/README.md#get_score_cards) - List a batch of ScoreCards
 * [add_score_card](docs/sdks/atsscorecard/README.md#add_score_card) - Create a ScoreCard
 * [get_score_card](docs/sdks/atsscorecard/README.md#get_score_card) - Retrieve a ScoreCard
-* [add_score_cards](docs/sdks/atsscorecard/README.md#add_score_cards) - Add a batch of ScoreCards
 
 ### [ats_screeningquestion](docs/sdks/atsscreeningquestion/README.md)
 
 * [get_screening_questions](docs/sdks/atsscreeningquestion/README.md#get_screening_questions) - List a batch of ScreeningQuestions
 * [add_screening_question](docs/sdks/atsscreeningquestion/README.md#add_screening_question) - Create a ScreeningQuestion
 * [get_screening_question](docs/sdks/atsscreeningquestion/README.md#get_screening_question) - Retrieve a ScreeningQuestion
-* [add_screening_questions](docs/sdks/atsscreeningquestion/README.md#add_screening_questions) - Add a batch of ScreeningQuestions
 
 ### [ats_tag](docs/sdks/atstag/README.md)
 
 * [get_ats_tags](docs/sdks/atstag/README.md#get_ats_tags) - List a batch of Tags
 * [add_tag](docs/sdks/atstag/README.md#add_tag) - Create a Tag
 * [get_ats_tag](docs/sdks/atstag/README.md#get_ats_tag) - Retrieve a Tag
-* [add_tags](docs/sdks/atstag/README.md#add_tags) - Add a batch of Tags
 
 ### [ats_user](docs/sdks/atsuser/README.md)
 
 * [get_ats_users](docs/sdks/atsuser/README.md#get_ats_users) - List a batch of Users
 * [add_ats_user](docs/sdks/atsuser/README.md#add_ats_user) - Create a User
 * [get_ats_user](docs/sdks/atsuser/README.md#get_ats_user) - Retrieve a User
-* [add_ats_users](docs/sdks/atsuser/README.md#add_ats_users) - Add a batch of Users
 
 ### [ats_eeocs](docs/sdks/atseeocs/README.md)
 
 * [get_eeocss](docs/sdks/atseeocs/README.md#get_eeocss) - List a batch of Eeocss
 * [add_eeocs](docs/sdks/atseeocs/README.md#add_eeocs) - Create a Eeocs
 * [get_eeocs](docs/sdks/atseeocs/README.md#get_eeocs) - Retrieve a Eeocs
-* [add_eeocss](docs/sdks/atseeocs/README.md#add_eeocss) - Add a batch of Eeocss
 
 ### [accounting_account](docs/sdks/accountingaccount/README.md)
 
 * [get_accounting_accounts](docs/sdks/accountingaccount/README.md#get_accounting_accounts) - List a batch of Accounts
 * [add_account](docs/sdks/accountingaccount/README.md#add_account) - Create a Account
 * [get_accounting_account](docs/sdks/accountingaccount/README.md#get_accounting_account) - Retrieve a Account
-* [add_accounts](docs/sdks/accountingaccount/README.md#add_accounts) - Add a batch of Accounts
 
 ### [accounting_address](docs/sdks/accountingaddress/README.md)
 
 * [get_addresss](docs/sdks/accountingaddress/README.md#get_addresss) - List a batch of Addresss
 * [add_address](docs/sdks/accountingaddress/README.md#add_address) - Create a Address
 * [get_address](docs/sdks/accountingaddress/README.md#get_address) - Retrieve a Address
-* [add_addresss](docs/sdks/accountingaddress/README.md#add_addresss) - Add a batch of Addresss
 
 ### [accounting_attachment](docs/sdks/accountingattachment/README.md)
 
 * [get_accounting_attachments](docs/sdks/accountingattachment/README.md#get_accounting_attachments) - List a batch of Attachments
 * [add_accounting_attachment](docs/sdks/accountingattachment/README.md#add_accounting_attachment) - Create a Attachment
 * [get_accounting_attachment](docs/sdks/accountingattachment/README.md#get_accounting_attachment) - Retrieve a Attachment
-* [add_accounting_attachments](docs/sdks/accountingattachment/README.md#add_accounting_attachments) - Add a batch of Attachments
 
 ### [accounting_balancesheet](docs/sdks/accountingbalancesheet/README.md)
 
 * [get_balance_sheets](docs/sdks/accountingbalancesheet/README.md#get_balance_sheets) - List a batch of BalanceSheets
 * [add_balance_sheet](docs/sdks/accountingbalancesheet/README.md#add_balance_sheet) - Create a BalanceSheet
 * [get_balance_sheet](docs/sdks/accountingbalancesheet/README.md#get_balance_sheet) - Retrieve a BalanceSheet
-* [add_balance_sheets](docs/sdks/accountingbalancesheet/README.md#add_balance_sheets) - Add a batch of BalanceSheets
 
 ### [accounting_cashflowstatement](docs/sdks/accountingcashflowstatement/README.md)
 
 * [get_cashflow_statements](docs/sdks/accountingcashflowstatement/README.md#get_cashflow_statements) - List a batch of CashflowStatements
 * [add_cashflow_statement](docs/sdks/accountingcashflowstatement/README.md#add_cashflow_statement) - Create a CashflowStatement
 * [get_cashflow_statement](docs/sdks/accountingcashflowstatement/README.md#get_cashflow_statement) - Retrieve a CashflowStatement
-* [add_cashflow_statements](docs/sdks/accountingcashflowstatement/README.md#add_cashflow_statements) - Add a batch of CashflowStatements
 
 ### [accounting_companyinfo](docs/sdks/accountingcompanyinfo/README.md)
 
 * [get_company_infos](docs/sdks/accountingcompanyinfo/README.md#get_company_infos) - List a batch of CompanyInfos
 * [add_company_info](docs/sdks/accountingcompanyinfo/README.md#add_company_info) - Create a CompanyInfo
 * [get_company_info](docs/sdks/accountingcompanyinfo/README.md#get_company_info) - Retrieve a CompanyInfo
-* [add_company_infos](docs/sdks/accountingcompanyinfo/README.md#add_company_infos) - Add a batch of CompanyInfos
 
 ### [accounting_contact](docs/sdks/accountingcontact/README.md)
 
 * [get_accounting_contacts](docs/sdks/accountingcontact/README.md#get_accounting_contacts) - List a batch of Contacts
 * [add_accounting_contact](docs/sdks/accountingcontact/README.md#add_accounting_contact) - Create a Contact
 * [get_accounting_contact](docs/sdks/accountingcontact/README.md#get_accounting_contact) - Retrieve a Contact
-* [add_accounting_contacts](docs/sdks/accountingcontact/README.md#add_accounting_contacts) - Add a batch of Contacts
 
 ### [accounting_creditnote](docs/sdks/accountingcreditnote/README.md)
 
 * [get_credit_notes](docs/sdks/accountingcreditnote/README.md#get_credit_notes) - List a batch of CreditNotes
 * [add_credit_note](docs/sdks/accountingcreditnote/README.md#add_credit_note) - Create a CreditNote
 * [get_credit_note](docs/sdks/accountingcreditnote/README.md#get_credit_note) - Retrieve a CreditNote
-* [add_credit_notes](docs/sdks/accountingcreditnote/README.md#add_credit_notes) - Add a batch of CreditNotes
 
 ### [accounting_expense](docs/sdks/accountingexpense/README.md)
 
 * [get_expenses](docs/sdks/accountingexpense/README.md#get_expenses) - List a batch of Expenses
 * [add_expense](docs/sdks/accountingexpense/README.md#add_expense) - Create a Expense
 * [get_expense](docs/sdks/accountingexpense/README.md#get_expense) - Retrieve a Expense
-* [add_expenses](docs/sdks/accountingexpense/README.md#add_expenses) - Add a batch of Expenses
 
 ### [accounting_incomestatement](docs/sdks/accountingincomestatement/README.md)
 
 * [get_income_statements](docs/sdks/accountingincomestatement/README.md#get_income_statements) - List a batch of IncomeStatements
 * [add_income_statement](docs/sdks/accountingincomestatement/README.md#add_income_statement) - Create a IncomeStatement
 * [get_income_statement](docs/sdks/accountingincomestatement/README.md#get_income_statement) - Retrieve a IncomeStatement
-* [add_income_statements](docs/sdks/accountingincomestatement/README.md#add_income_statements) - Add a batch of IncomeStatements
 
 ### [accounting_invoice](docs/sdks/accountinginvoice/README.md)
 
 * [get_invoices](docs/sdks/accountinginvoice/README.md#get_invoices) - List a batch of Invoices
 * [add_invoice](docs/sdks/accountinginvoice/README.md#add_invoice) - Create a Invoice
 * [get_invoice](docs/sdks/accountinginvoice/README.md#get_invoice) - Retrieve a Invoice
-* [add_invoices](docs/sdks/accountinginvoice/README.md#add_invoices) - Add a batch of Invoices
 
 ### [accounting_item](docs/sdks/accountingitem/README.md)
 
 * [get_items](docs/sdks/accountingitem/README.md#get_items) - List a batch of Items
 * [add_item](docs/sdks/accountingitem/README.md#add_item) - Create a Item
 * [get_item](docs/sdks/accountingitem/README.md#get_item) - Retrieve a Item
-* [add_items](docs/sdks/accountingitem/README.md#add_items) - Add a batch of Items
 
 ### [accounting_journalentry](docs/sdks/accountingjournalentry/README.md)
 
 * [get_journal_entrys](docs/sdks/accountingjournalentry/README.md#get_journal_entrys) - List a batch of JournalEntrys
 * [add_journal_entry](docs/sdks/accountingjournalentry/README.md#add_journal_entry) - Create a JournalEntry
 * [get_journal_entry](docs/sdks/accountingjournalentry/README.md#get_journal_entry) - Retrieve a JournalEntry
-* [add_journal_entrys](docs/sdks/accountingjournalentry/README.md#add_journal_entrys) - Add a batch of JournalEntrys
 
 ### [accounting_payment](docs/sdks/accountingpayment/README.md)
 
 * [get_payments](docs/sdks/accountingpayment/README.md#get_payments) - List a batch of Payments
 * [add_payment](docs/sdks/accountingpayment/README.md#add_payment) - Create a Payment
 * [get_payment](docs/sdks/accountingpayment/README.md#get_payment) - Retrieve a Payment
-* [add_payments](docs/sdks/accountingpayment/README.md#add_payments) - Add a batch of Payments
 
 ### [accounting_phonenumber](docs/sdks/accountingphonenumber/README.md)
 
 * [get_phone_numbers](docs/sdks/accountingphonenumber/README.md#get_phone_numbers) - List a batch of PhoneNumbers
 * [add_phone_number](docs/sdks/accountingphonenumber/README.md#add_phone_number) - Create a PhoneNumber
 * [get_phone_number](docs/sdks/accountingphonenumber/README.md#get_phone_number) - Retrieve a PhoneNumber
-* [add_phone_numbers](docs/sdks/accountingphonenumber/README.md#add_phone_numbers) - Add a batch of PhoneNumbers
 
 ### [accounting_purchaseorder](docs/sdks/accountingpurchaseorder/README.md)
 
 * [get_purchase_orders](docs/sdks/accountingpurchaseorder/README.md#get_purchase_orders) - List a batch of PurchaseOrders
 * [add_purchase_order](docs/sdks/accountingpurchaseorder/README.md#add_purchase_order) - Create a PurchaseOrder
 * [get_purchase_order](docs/sdks/accountingpurchaseorder/README.md#get_purchase_order) - Retrieve a PurchaseOrder
-* [add_purchase_orders](docs/sdks/accountingpurchaseorder/README.md#add_purchase_orders) - Add a batch of PurchaseOrders
 
 ### [accounting_taxrate](docs/sdks/accountingtaxrate/README.md)
 
 * [get_tax_rates](docs/sdks/accountingtaxrate/README.md#get_tax_rates) - List a batch of TaxRates
 * [add_tax_rate](docs/sdks/accountingtaxrate/README.md#add_tax_rate) - Create a TaxRate
 * [get_tax_rate](docs/sdks/accountingtaxrate/README.md#get_tax_rate) - Retrieve a TaxRate
-* [add_tax_rates](docs/sdks/accountingtaxrate/README.md#add_tax_rates) - Add a batch of TaxRates
 
 ### [accounting_trackingcategory](docs/sdks/accountingtrackingcategory/README.md)
 
 * [get_tracking_categorys](docs/sdks/accountingtrackingcategory/README.md#get_tracking_categorys) - List a batch of TrackingCategorys
 * [add_tracking_category](docs/sdks/accountingtrackingcategory/README.md#add_tracking_category) - Create a TrackingCategory
 * [get_tracking_category](docs/sdks/accountingtrackingcategory/README.md#get_tracking_category) - Retrieve a TrackingCategory
-* [add_tracking_categorys](docs/sdks/accountingtrackingcategory/README.md#add_tracking_categorys) - Add a batch of TrackingCategorys
 
 ### [accounting_transaction](docs/sdks/accountingtransaction/README.md)
 
 * [get_transactions](docs/sdks/accountingtransaction/README.md#get_transactions) - List a batch of Transactions
 * [add_transaction](docs/sdks/accountingtransaction/README.md#add_transaction) - Create a Transaction
 * [get_transaction](docs/sdks/accountingtransaction/README.md#get_transaction) - Retrieve a Transaction
-* [add_transactions](docs/sdks/accountingtransaction/README.md#add_transactions) - Add a batch of Transactions
 
 ### [accounting_vendorcredit](docs/sdks/accountingvendorcredit/README.md)
 
 * [get_vendor_credits](docs/sdks/accountingvendorcredit/README.md#get_vendor_credits) - List a batch of VendorCredits
 * [add_vendor_credit](docs/sdks/accountingvendorcredit/README.md#add_vendor_credit) - Create a VendorCredit
 * [get_vendor_credit](docs/sdks/accountingvendorcredit/README.md#get_vendor_credit) - Retrieve a VendorCredit
-* [add_vendor_credits](docs/sdks/accountingvendorcredit/README.md#add_vendor_credits) - Add a batch of VendorCredits
 
 ### [filestorage_drive](docs/sdks/filestoragedrive/README.md)
 
 * [get_drives](docs/sdks/filestoragedrive/README.md#get_drives) - List a batch of Drives
 * [add_drive](docs/sdks/filestoragedrive/README.md#add_drive) - Create a Drive
 * [get_drive](docs/sdks/filestoragedrive/README.md#get_drive) - Retrieve a Drive
-* [add_drives](docs/sdks/filestoragedrive/README.md#add_drives) - Add a batch of Drives
 
 ### [filestorage_file](docs/sdks/filestoragefile/README.md)
 
 * [get_files](docs/sdks/filestoragefile/README.md#get_files) - List a batch of Files
 * [add_file](docs/sdks/filestoragefile/README.md#add_file) - Create a File
 * [get_file](docs/sdks/filestoragefile/README.md#get_file) - Retrieve a File
-* [add_files](docs/sdks/filestoragefile/README.md#add_files) - Add a batch of Files
 
 ### [filestorage_folder](docs/sdks/filestoragefolder/README.md)
 
 * [get_folders](docs/sdks/filestoragefolder/README.md#get_folders) - List a batch of Folders
 * [add_folder](docs/sdks/filestoragefolder/README.md#add_folder) - Create a Folder
 * [get_folder](docs/sdks/filestoragefolder/README.md#get_folder) - Retrieve a Folder
-* [add_folders](docs/sdks/filestoragefolder/README.md#add_folders) - Add a batch of Folders
 
 ### [filestorage_sharedlink](docs/sdks/filestoragesharedlink/README.md)
 
 * [get_sharedlinks](docs/sdks/filestoragesharedlink/README.md#get_sharedlinks) - List a batch of Sharedlinks
 * [add_sharedlink](docs/sdks/filestoragesharedlink/README.md#add_sharedlink) - Create a Sharedlink
 * [get_sharedlink](docs/sdks/filestoragesharedlink/README.md#get_sharedlink) - Retrieve a Sharedlink
-* [add_sharedlinks](docs/sdks/filestoragesharedlink/README.md#add_sharedlinks) - Add a batch of Sharedlinks
 
 ### [filestorage_permission](docs/sdks/filestoragepermission/README.md)
 
 * [get_permissions](docs/sdks/filestoragepermission/README.md#get_permissions) - List a batch of Permissions
 * [add_permission](docs/sdks/filestoragepermission/README.md#add_permission) - Create a Permission
-* [update_permission](docs/sdks/filestoragepermission/README.md#update_permission) - Update a Permission
 * [get_permission](docs/sdks/filestoragepermission/README.md#get_permission) - Retrieve a Permission
-* [add_permissions](docs/sdks/filestoragepermission/README.md#add_permissions) - Add a batch of Permissions
 
 ### [ticketing_attachments](docs/sdks/ticketingattachments/README.md)
 
@@ -718,7 +639,6 @@ if res.string is not None:
 * [add_ticketing_attachment](docs/sdks/ticketingattachments/README.md#add_ticketing_attachment) - Create a Attachment
 * [get_ticketing_attachment](docs/sdks/ticketingattachments/README.md#get_ticketing_attachment) - Retrieve a Attachment
 * [download_attachment](docs/sdks/ticketingattachments/README.md#download_attachment) - Download a Attachment
-* [add_ticketing_attachments](docs/sdks/ticketingattachments/README.md#add_ticketing_attachments) - Add a batch of Attachments
 <!-- End Available Resources and Operations [operations] -->
 
 <!-- Start Error Handling [errors] -->
@@ -742,7 +662,7 @@ s = panora.Panora(
 
 res = None
 try:
-    res = s.get_hello()
+    res = s.app_controller_hello()
 
 except errors.SDKError as e:
     # handle exception
@@ -778,7 +698,7 @@ s = panora.Panora(
 )
 
 
-res = s.get_hello()
+res = s.app_controller_hello()
 
 if res.string is not None:
     # handle response
@@ -799,7 +719,7 @@ s = panora.Panora(
 )
 
 
-res = s.get_hello()
+res = s.app_controller_hello()
 
 if res.string is not None:
     # handle response
@@ -844,7 +764,7 @@ s = panora.Panora(
 )
 
 
-res = s.get_hello()
+res = s.app_controller_hello()
 
 if res.string is not None:
     # handle response

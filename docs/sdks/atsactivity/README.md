@@ -6,7 +6,6 @@
 * [get_activitys](#get_activitys) - List a batch of Activitys
 * [add_activity](#add_activity) - Create a Activity
 * [get_activity](#get_activity) - Retrieve a Activity
-* [add_activitys](#add_activitys) - Add a batch of Activitys
 
 ## get_activitys
 
@@ -121,50 +120,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetActivityResponse](../../models/operations/getactivityresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_activitys
-
-Add a batch of Activitys
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.ats_activity.add_activitys(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedActivityInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `connection_token`                                                                       | *str*                                                                                    | :heavy_check_mark:                                                                       | N/A                                                                                      |
-| `x_connection_token`                                                                     | *str*                                                                                    | :heavy_check_mark:                                                                       | The connection token                                                                     |
-| `request_body`                                                                           | List[[components.UnifiedActivityInput](../../models/components/unifiedactivityinput.md)] | :heavy_check_mark:                                                                       | N/A                                                                                      |
-| `remote_data`                                                                            | *Optional[bool]*                                                                         | :heavy_minus_sign:                                                                       | Set to true to include data from the original Ats software.                              |
-
-
-### Response
-
-**[operations.AddActivitysResponse](../../models/operations/addactivitysresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

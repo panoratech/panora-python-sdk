@@ -6,7 +6,6 @@
 * [get_ats_attachments](#get_ats_attachments) - List a batch of Attachments
 * [add_ats_attachment](#add_ats_attachment) - Create a Attachment
 * [get_ats_attachment](#get_ats_attachment) - Retrieve a Attachment
-* [add_ats_attachments](#add_ats_attachments) - Add a batch of Attachments
 
 ## get_ats_attachments
 
@@ -126,55 +125,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetAtsAttachmentResponse](../../models/operations/getatsattachmentresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_ats_attachments
-
-Add a batch of Attachments
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.ats_attachment.add_ats_attachments(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedAttachmentInput(
-        file_name='your_file_here',
-        file_url='<value>',
-        uploader='<value>',
-        field_mappings=components.UnifiedAttachmentInputFieldMappings(),
-    ),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `connection_token`                                                                           | *str*                                                                                        | :heavy_check_mark:                                                                           | N/A                                                                                          |
-| `x_connection_token`                                                                         | *str*                                                                                        | :heavy_check_mark:                                                                           | The connection token                                                                         |
-| `request_body`                                                                               | List[[components.UnifiedAttachmentInput](../../models/components/unifiedattachmentinput.md)] | :heavy_check_mark:                                                                           | N/A                                                                                          |
-| `remote_data`                                                                                | *Optional[bool]*                                                                             | :heavy_minus_sign:                                                                           | Set to true to include data from the original Ats software.                                  |
-
-
-### Response
-
-**[operations.AddAtsAttachmentsResponse](../../models/operations/addatsattachmentsresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

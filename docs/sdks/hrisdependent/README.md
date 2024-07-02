@@ -6,7 +6,6 @@
 * [get_dependents](#get_dependents) - List a batch of Dependents
 * [add_dependent](#add_dependent) - Create a Dependent
 * [get_dependent](#get_dependent) - Retrieve a Dependent
-* [add_dependents](#add_dependents) - Add a batch of Dependents
 
 ## get_dependents
 
@@ -121,50 +120,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetDependentResponse](../../models/operations/getdependentresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_dependents
-
-Add a batch of Dependents
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.hris_dependent.add_dependents(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedDependentInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `connection_token`                                                                         | *str*                                                                                      | :heavy_check_mark:                                                                         | N/A                                                                                        |
-| `x_connection_token`                                                                       | *str*                                                                                      | :heavy_check_mark:                                                                         | The connection token                                                                       |
-| `request_body`                                                                             | List[[components.UnifiedDependentInput](../../models/components/unifieddependentinput.md)] | :heavy_check_mark:                                                                         | N/A                                                                                        |
-| `remote_data`                                                                              | *Optional[bool]*                                                                           | :heavy_minus_sign:                                                                         | Set to true to include data from the original Hris software.                               |
-
-
-### Response
-
-**[operations.AddDependentsResponse](../../models/operations/adddependentsresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

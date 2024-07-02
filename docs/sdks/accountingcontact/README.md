@@ -6,7 +6,6 @@
 * [get_accounting_contacts](#get_accounting_contacts) - List a batch of Contacts
 * [add_accounting_contact](#add_accounting_contact) - Create a Contact
 * [get_accounting_contact](#get_accounting_contact) - Retrieve a Contact
-* [add_accounting_contacts](#add_accounting_contacts) - Add a batch of Contacts
 
 ## get_accounting_contacts
 
@@ -121,50 +120,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetAccountingContactResponse](../../models/operations/getaccountingcontactresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_accounting_contacts
-
-Add a batch of Contacts
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.accounting_contact.add_accounting_contacts(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedContactInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `connection_token`                                                                     | *str*                                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
-| `x_connection_token`                                                                   | *str*                                                                                  | :heavy_check_mark:                                                                     | The connection token                                                                   |
-| `request_body`                                                                         | List[[components.UnifiedContactInput](../../models/components/unifiedcontactinput.md)] | :heavy_check_mark:                                                                     | N/A                                                                                    |
-| `remote_data`                                                                          | *Optional[bool]*                                                                       | :heavy_minus_sign:                                                                     | Set to true to include data from the original Accounting software.                     |
-
-
-### Response
-
-**[operations.AddAccountingContactsResponse](../../models/operations/addaccountingcontactsresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

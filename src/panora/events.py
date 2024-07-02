@@ -15,12 +15,12 @@ class Events:
         
     
     
-    def get_panora_core_events(self, page: Optional[float] = None, page_size: Optional[float] = None) -> operations.GetPanoraCoreEventsResponse:
+    def get_panora_core_events(self, page: Optional[float] = None, limit: Optional[float] = None) -> operations.GetPanoraCoreEventsResponse:
         r"""Retrieve Events"""
         hook_ctx = HookContext(operation_id='getPanoraCoreEvents', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         request = operations.GetPanoraCoreEventsRequest(
             page=page,
-            page_size=page_size,
+            limit=limit,
         )
         
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

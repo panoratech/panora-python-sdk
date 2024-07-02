@@ -15,13 +15,13 @@ class TicketingAccounts:
         
     
     
-    def get_ticketing_accounts(self, x_connection_token: str, remote_data: Optional[bool] = None, page_size: Optional[float] = None, cursor: Optional[str] = None) -> operations.GetTicketingAccountsResponse:
+    def get_ticketing_accounts(self, x_connection_token: str, remote_data: Optional[bool] = None, limit: Optional[float] = None, cursor: Optional[str] = None) -> operations.GetTicketingAccountsResponse:
         r"""List a batch of Accounts"""
         hook_ctx = HookContext(operation_id='getTicketingAccounts', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         request = operations.GetTicketingAccountsRequest(
             x_connection_token=x_connection_token,
             remote_data=remote_data,
-            page_size=page_size,
+            limit=limit,
             cursor=cursor,
         )
         

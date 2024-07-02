@@ -6,7 +6,6 @@
 * [get_credit_notes](#get_credit_notes) - List a batch of CreditNotes
 * [add_credit_note](#add_credit_note) - Create a CreditNote
 * [get_credit_note](#get_credit_note) - Retrieve a CreditNote
-* [add_credit_notes](#add_credit_notes) - Add a batch of CreditNotes
 
 ## get_credit_notes
 
@@ -121,50 +120,6 @@ if res.object is not None:
 ### Response
 
 **[operations.GetCreditNoteResponse](../../models/operations/getcreditnoteresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## add_credit_notes
-
-Add a batch of CreditNotes
-
-### Example Usage
-
-```python
-import panora
-from panora.models import components
-
-s = panora.Panora(
-    jwt="<YOUR_BEARER_TOKEN_HERE>",
-)
-
-
-res = s.accounting_creditnote.add_credit_notes(connection_token='<value>', x_connection_token='<value>', request_body=[
-    components.UnifiedCreditNoteInput(),
-], remote_data=False)
-
-if res.object is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `connection_token`                                                                           | *str*                                                                                        | :heavy_check_mark:                                                                           | N/A                                                                                          |
-| `x_connection_token`                                                                         | *str*                                                                                        | :heavy_check_mark:                                                                           | The connection token                                                                         |
-| `request_body`                                                                               | List[[components.UnifiedCreditNoteInput](../../models/components/unifiedcreditnoteinput.md)] | :heavy_check_mark:                                                                           | N/A                                                                                          |
-| `remote_data`                                                                                | *Optional[bool]*                                                                             | :heavy_minus_sign:                                                                           | Set to true to include data from the original Accounting software.                           |
-
-
-### Response
-
-**[operations.AddCreditNotesResponse](../../models/operations/addcreditnotesresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

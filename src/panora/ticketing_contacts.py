@@ -15,13 +15,13 @@ class TicketingContacts:
         
     
     
-    def get_ticketing_contacts(self, x_connection_token: str, remote_data: Optional[bool] = None, page_size: Optional[float] = None, cursor: Optional[str] = None) -> operations.GetTicketingContactsResponse:
+    def get_ticketing_contacts(self, x_connection_token: str, remote_data: Optional[bool] = None, limit: Optional[float] = None, cursor: Optional[str] = None) -> operations.GetTicketingContactsResponse:
         r"""List all Contacts"""
         hook_ctx = HookContext(operation_id='getTicketingContacts', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         request = operations.GetTicketingContactsRequest(
             x_connection_token=x_connection_token,
             remote_data=remote_data,
-            page_size=page_size,
+            limit=limit,
             cursor=cursor,
         )
         
